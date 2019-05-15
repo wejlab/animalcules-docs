@@ -40,7 +40,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.99.71</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.4</span>
       </span>
     </div>
 
@@ -105,9 +105,9 @@
       </header><div class="row">
   <div class="contents col-md-9">
 
-<div id="animalcules-" class="section level2">
+<div id="animalcules" class="section level2">
 <h2 class="hasAnchor">
-<a href="#animalcules-" class="anchor"></a>animalcules <img src="https://github.com/compbiomed/materials/blob/master/animalcules/animalcules_logo.png?raw=true" align="right" width="170">
+<a href="#animalcules" class="anchor"></a>animalcules <img src="https://github.com/compbiomed/materials/blob/master/animalcules/animalcules_logo.png?raw=true" align="right" width="170">
 </h2>
 
 </div>
@@ -129,21 +129,21 @@
 <ul>
 <li>Install the development version of the package from Bioconductor</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/ns-load">requireNamespace</a></span>(<span class="st">"BiocManager"</span>, <span class="dt">quietly=</span><span class="ot">TRUE</span>))</a>
-<a class="sourceLine" id="cb1-2" title="2">  <span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"BiocManager"</span>)</a>
-<a class="sourceLine" id="cb1-3" title="3">BiocManager<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/BiocManager/topics/install">install</a></span>(<span class="st">"compbiomed/animalcules"</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/ns-load">requireNamespace</a></span>(<span class="st">"BiocManager"</span>, <span class="dt">quietly=</span><span class="ot">TRUE</span>))
+  <span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"BiocManager"</span>)
+BiocManager<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/BiocManager/topics/install">install</a></span>(<span class="st">"compbiomed/animalcules"</span>)</code></pre></div>
 <ul>
 <li>Install the development version of the package from Github</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/ns-load">requireNamespace</a></span>(<span class="st">"devtools"</span>, <span class="dt">quietly=</span><span class="ot">TRUE</span>))</a>
-<a class="sourceLine" id="cb2-2" title="2">  <span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"devtools"</span>)</a>
-<a class="sourceLine" id="cb2-3" title="3">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"compbiomed/animalcules"</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/ns-load">requireNamespace</a></span>(<span class="st">"devtools"</span>, <span class="dt">quietly=</span><span class="ot">TRUE</span>))
+  <span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"devtools"</span>)
+devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"compbiomed/animalcules"</span>)</code></pre></div>
 </div>
 <div id="run-animalcules-shiny-app" class="section level2">
 <h2 class="hasAnchor">
 <a href="#run-animalcules-shiny-app" class="anchor"></a>Run animalcules shiny app</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(animalcules)</a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="kw"><a href="reference/run_animalcules.html">run_animalcules</a></span>()</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(animalcules)
+<span class="kw"><a href="reference/run_animalcules.html">run_animalcules</a></span>()</code></pre></div>
 </div>
 
   </div>

@@ -63,7 +63,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.99.71</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.4</span>
       </span>
     </div>
 
@@ -187,13 +187,12 @@
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    IQR, mad, sd, var, xtabs</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:base’:</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    anyDuplicated, append, as.data.frame, basename, cbind, colMeans,</span>
-#&gt; <span class='message'>    colnames, colSums, dirname, do.call, duplicated, eval, evalq,</span>
-#&gt; <span class='message'>    Filter, Find, get, grep, grepl, intersect, is.unsorted, lapply,</span>
-#&gt; <span class='message'>    lengths, Map, mapply, match, mget, order, paste, pmax, pmax.int,</span>
-#&gt; <span class='message'>    pmin, pmin.int, Position, rank, rbind, Reduce, rowMeans, rownames,</span>
-#&gt; <span class='message'>    rowSums, sapply, setdiff, sort, table, tapply, union, unique,</span>
-#&gt; <span class='message'>    unsplit, which, which.max, which.min</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: S4Vectors</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>    anyDuplicated, append, as.data.frame, basename, cbind, colnames,</span>
+#&gt; <span class='message'>    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,</span>
+#&gt; <span class='message'>    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,</span>
+#&gt; <span class='message'>    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,</span>
+#&gt; <span class='message'>    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,</span>
+#&gt; <span class='message'>    union, unique, unsplit, which, which.max, which.min</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: S4Vectors</span></div><div class='output co'>#&gt; <span class='message'></span>
 #&gt; <span class='message'>Attaching package: ‘S4Vectors’</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from ‘package:base’:</span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    expand.grid</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: IRanges</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: GenomeInfoDb</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: Biobase</span></div><div class='output co'>#&gt; <span class='message'>Welcome to Bioconductor</span>
@@ -208,7 +207,7 @@
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:base’:</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    aperm, apply</span></div><div class='input'><span class='no'>data_dir</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'extdata/MAE.rds'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'animalcules'</span>)
+#&gt; <span class='message'>    aperm, apply, rowsum</span></div><div class='input'><span class='no'>data_dir</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'extdata/MAE.rds'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'animalcules'</span>)
 <span class='no'>toy_data</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/readRDS'>readRDS</a></span>(<span class='no'>data_dir</span>)
 <span class='no'>microbe</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>MultiAssayExperiment</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/MultiAssayExperiment/topics/MultiAssayExperiment-methods'>experiments</a></span>(<span class='no'>toy_data</span>)<span class='kw'>[[</span><span class='fl'>1</span>]]
 <span class='no'>samples</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.data.frame'>as.data.frame</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/SummarizedExperiment/topics/SummarizedExperiment-class'>colData</a></span>(<span class='no'>microbe</span>))
