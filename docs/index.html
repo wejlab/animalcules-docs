@@ -129,17 +129,17 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <ul>
-<li>Install the development version of the package from Bioconductor</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span>(<span class="st">"BiocManager"</span>, <span class="dt">quietly=</span><span class="ot">TRUE</span>))
-  <span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"BiocManager"</span>)
-BiocManager<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/BiocManager/man/install.html">install</a></span>(<span class="st">"compbiomed/animalcules"</span>)</code></pre></div>
-<ul>
-<li>Install the development version of the package from Github</li>
+<li>Install the development version of the package from Github (recommended)</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span>(<span class="st">"devtools"</span>, <span class="dt">quietly=</span><span class="ot">TRUE</span>))
   <span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"devtools"</span>)
 devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/remote-reexports.html">install_github</a></span>(<span class="st">"compbiomed/animalcules"</span>)</code></pre></div>
+<ul>
+<li>Install the release version of the package from Bioconductor</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span>(<span class="st">"BiocManager"</span>, <span class="dt">quietly=</span><span class="ot">TRUE</span>))
+  <span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"BiocManager"</span>)
+BiocManager<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/BiocManager/man/install.html">install</a></span>(<span class="st">"compbiomed/animalcules"</span>)</code></pre></div>
 </div>
 <div id="run-animalcules-shiny-app" class="section level2">
 <h2 class="hasAnchor">
@@ -180,7 +180,7 @@ devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://doi.org/doi:10.18129/B9.bioc.animalcules"><img src="https://img.shields.io/badge/bioconductor-3.9-3a6378.svg"></a></li>
+<li><a href="https://doi.org/doi:10.18129/B9.bioc.animalcules"><img src="https://img.shields.io/badge/bioconductor-3.10-3a6378.svg"></a></li>
 <li><a href="https://bioconductor.org/checkResults/3.9/bioc-LATEST/animalcules/"><img src="https://img.shields.io/badge/platforms-linux%20%7C%20osx%20%7C%20win-2a89a1.svg"></a></li>
 <li><a href="https://github.com/compbiomed/animalcules/commits/master"><img src="https://img.shields.io/github/last-commit/compbiomed/animalcules.svg"></a></li>
 <li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg"></a></li>
