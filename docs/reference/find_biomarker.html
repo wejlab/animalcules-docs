@@ -69,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.7</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.3.4</span>
       </span>
     </div>
 
@@ -144,9 +144,16 @@
     <p>Identify biomarkers</p>
     </div>
 
-    <pre class="usage"><span class='fu'>find_biomarker</span>(<span class='no'>MAE</span>, <span class='no'>tax_level</span>, <span class='no'>input_select_target_biomarker</span>, <span class='kw'>nfolds</span> <span class='kw'>=</span> <span class='fl'>3</span>,
-  <span class='kw'>nrepeats</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>seed</span> <span class='kw'>=</span> <span class='fl'>99</span>, <span class='kw'>percent_top_biomarker</span> <span class='kw'>=</span> <span class='fl'>0.2</span>,
-  <span class='kw'>model_name</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"logistic regression"</span>, <span class='st'>"random forest"</span>))</pre>
+    <pre class="usage"><span class='fu'>find_biomarker</span>(
+  <span class='no'>MAE</span>,
+  <span class='no'>tax_level</span>,
+  <span class='no'>input_select_target_biomarker</span>,
+  <span class='kw'>nfolds</span> <span class='kw'>=</span> <span class='fl'>3</span>,
+  <span class='kw'>nrepeats</span> <span class='kw'>=</span> <span class='fl'>3</span>,
+  <span class='kw'>seed</span> <span class='kw'>=</span> <span class='fl'>99</span>,
+  <span class='kw'>percent_top_biomarker</span> <span class='kw'>=</span> <span class='fl'>0.2</span>,
+  <span class='kw'>model_name</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"logistic regression"</span>, <span class='st'>"random forest"</span>)
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">

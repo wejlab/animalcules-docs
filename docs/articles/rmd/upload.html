@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.7</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.3.4</span>
       </span>
     </div>
 
@@ -107,11 +107,13 @@
 
     
     
-<p>There are 5 data upload methods:</p>
+<p>There are 7 data upload methods:</p>
 <ul>
 <li>Count File (Mostly used for uploading new dataset)</li>
 <li>Example Data (For exploring animalcules)</li>
 <li>animalcules file (Re-upload previously uploaded dataset quickly)</li>
+<li>BIOM file</li>
+<li>Count file with taxonomy id (this is the option if taxonomy table is not available)</li>
 <li>Pathoscope File</li>
 <li>animalcules-id file</li>
 </ul>
@@ -162,6 +164,50 @@
 <p>In animalcules, users could choose to save their dataset to a .rds file in the Tab 2 (Summary and Filter). Later, users could load this saved dataset by uploading the .rds file to animalcules easily via this animalcules file upload option.</p>
 <p>Running time: &lt; 0.5s</p>
 <p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/animalcules_file.PNG?raw=true" width="500"></p>
+</div>
+<div id="biom-file" class="section level3">
+<h3 class="hasAnchor">
+<a href="#biom-file" class="anchor"></a>Biom file</h3>
+<p>Make sure:</p>
+<ul>
+<li>The BIOM file must contain the sample metadata info (annotation for each sample)</li>
+<li>Please check <a href="http://biom-format.org/documentation/adding_metadata.html" class="uri">http://biom-format.org/documentation/adding_metadata.html</a> to add sample metadate into .biom file if sample metadata is missing.</li>
+</ul>
+<p>Instructions:</p>
+<ul>
+<li>Click the “Advanced Options” checkbox and select “BIOM file”</li>
+<li>Click the “Browse…” button to upload required .biom file.</li>
+<li>Click the button “Upload”.</li>
+</ul>
+<p>Running time: &lt; 0.5s</p>
+<p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/biom.PNG?raw=true" width="500"></p>
+</div>
+<div id="count-file-with-taxonomy-id" class="section level3">
+<h3 class="hasAnchor">
+<a href="#count-file-with-taxonomy-id" class="anchor"></a>Count File with Taxonomy id</h3>
+<p>Both 16s and metagenomics generated data are supported here. The two required files are:</p>
+<ul>
+<li>Counts file: each row is a tax id, each column is a sample name.</li>
+<li>Annotation file: each row is a sample name, each column is a variable/feature name.</li>
+</ul>
+<p>Make sure:</p>
+<ul>
+<li>The sample names in the counts file agree with the one in annotation file.</li>
+<li>The first element in eaah row is the taxonomy id, e.g. ti|657314</li>
+<li>Both files have the same file separator and same file type (e.g. csv).</li>
+</ul>
+<p>Instructions:</p>
+<ul>
+<li>Click the “Advanced Options” checkbox and select “Count file with tax id”</li>
+<li>Click the “Browse…” button to upload required two files.</li>
+<li>Input which column in the annotation file is the sample name (default is 1).</li>
+<li>Check if the annotation file has header (default is TRUE).</li>
+<li>Select the separator (default is comma AKA .csv file).</li>
+<li>Click the button “Upload”.</li>
+</ul>
+<p>Note: Each uploaded table will show up in the right panel.</p>
+<p>Running time: &lt; 1s</p>
+<p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/countTi.PNG?raw=true" width="500"></p>
 </div>
 <div id="pathoscope-file" class="section level3">
 <h3 class="hasAnchor">

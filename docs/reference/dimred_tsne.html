@@ -69,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.7</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.3.4</span>
       </span>
     </div>
 
@@ -144,9 +144,17 @@
     <p>Dimensionality reduction through t-SNE</p>
     </div>
 
-    <pre class="usage"><span class='fu'>dimred_tsne</span>(<span class='no'>MAE</span>, <span class='no'>tax_level</span>, <span class='no'>color</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>k</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"2D"</span>, <span class='st'>"3D"</span>),
-  <span class='kw'>initial_dims</span> <span class='kw'>=</span> <span class='fl'>30</span>, <span class='kw'>perplexity</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>datatype</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"logcpm"</span>,
-  <span class='st'>"relabu"</span>, <span class='st'>"counts"</span>), <span class='kw'>tsne_cache</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>dimred_tsne</span>(
+  <span class='no'>MAE</span>,
+  <span class='no'>tax_level</span>,
+  <span class='no'>color</span>,
+  <span class='kw'>shape</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>k</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"2D"</span>, <span class='st'>"3D"</span>),
+  <span class='kw'>initial_dims</span> <span class='kw'>=</span> <span class='fl'>30</span>,
+  <span class='kw'>perplexity</span> <span class='kw'>=</span> <span class='fl'>10</span>,
+  <span class='kw'>datatype</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"logcpm"</span>, <span class='st'>"relabu"</span>, <span class='st'>"counts"</span>),
+  <span class='kw'>tsne_cache</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">

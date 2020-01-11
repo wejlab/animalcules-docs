@@ -69,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.7</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.3.4</span>
       </span>
     </div>
 
@@ -144,10 +144,13 @@
     <p>Alpha diversity statistical test</p>
     </div>
 
-    <pre class="usage"><span class='fu'>do_alpha_div_test</span>(<span class='no'>MAE</span>, <span class='no'>tax_level</span>, <span class='no'>condition</span>,
-  <span class='kw'>alpha_metric</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"inverse_simpson"</span>, <span class='st'>"gini_simpson"</span>, <span class='st'>"shannon"</span>,
-  <span class='st'>"fisher"</span>, <span class='st'>"coverage"</span>), <span class='kw'>alpha_stat</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Wilcoxon rank sum test"</span>,
-  <span class='st'>"T-test"</span>, <span class='st'>"Kruskal-Wallis"</span>))</pre>
+    <pre class="usage"><span class='fu'>do_alpha_div_test</span>(
+  <span class='no'>MAE</span>,
+  <span class='no'>tax_level</span>,
+  <span class='no'>condition</span>,
+  <span class='kw'>alpha_metric</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"inverse_simpson"</span>, <span class='st'>"gini_simpson"</span>, <span class='st'>"shannon"</span>, <span class='st'>"fisher"</span>, <span class='st'>"coverage"</span>),
+  <span class='kw'>alpha_stat</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Wilcoxon rank sum test"</span>, <span class='st'>"T-test"</span>, <span class='st'>"Kruskal-Wallis"</span>)
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
