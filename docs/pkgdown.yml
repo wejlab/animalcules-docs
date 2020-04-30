@@ -1,5 +1,5 @@
 pandoc: 1.19.2.1
-pkgdown: 1.4.1
+pkgdown: 1.5.1
 pkgdown_sha: ~
 articles:
   animalcules: animalcules.html
@@ -10,4 +10,5 @@ articles:
   diversity: rmd/diversity.html
   summary: rmd/summary.html
   upload: rmd/upload.html
+last_built: 2020-04-30T20:54Z
 

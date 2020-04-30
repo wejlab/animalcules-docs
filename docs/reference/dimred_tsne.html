@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -37,7 +41,6 @@
 
 <meta property="og:title" content="Dimensionality reduction through t-SNE — dimred_tsne" />
 <meta property="og:description" content="Dimensionality reduction through t-SNE" />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -55,7 +58,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -69,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.3.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.4.0</span>
       </span>
     </div>
 
@@ -204,78 +207,19 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='no'>data_dir</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"extdata/MAE.rds"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"animalcules"</span>)
 <span class='no'>toy_data</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readRDS.html'>readRDS</a></span>(<span class='no'>data_dir</span>)
-<span class='no'>p</span> <span class='kw'>&lt;-</span> <span class='fu'>dimred_tsne</span>(<span class='no'>toy_data</span>,
-                 <span class='kw'>tax_level</span><span class='kw'>=</span><span class='st'>"phylum"</span>,
-                 <span class='kw'>color</span><span class='kw'>=</span><span class='st'>"AGE"</span>,
-                 <span class='kw'>shape</span><span class='kw'>=</span><span class='st'>"GROUP"</span>,
-                 <span class='kw'>k</span><span class='kw'>=</span><span class='st'>"3D"</span>,
-                 <span class='kw'>initial_dims</span><span class='kw'>=</span><span class='fl'>30</span>,
-                 <span class='kw'>perplexity</span><span class='kw'>=</span><span class='fl'>10</span>,
-                 <span class='kw'>datatype</span><span class='kw'>=</span><span class='st'>"logcpm"</span>)</div><div class='output co'>#&gt; <span class='message'>sigma summary: Min. : 0.439403562593612 |1st Qu. : 0.614507809712872 |Median : 0.678538111578798 |Mean : 0.677688154944898 |3rd Qu. : 0.742449349451526 |Max. : 0.916738699643141 |</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #100 error is: 17.3254624174099</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #200 error is: 1.10221891600239</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #300 error is: 0.669765639361604</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #400 error is: 0.481946218890382</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #500 error is: 0.314989814726309</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #600 error is: 0.28029745232966</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #700 error is: 0.272248021007063</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #800 error is: 0.264591762293109</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #900 error is: 0.26038780252</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #1000 error is: 0.259517352548058</span></div><div class='input'><span class='no'>p</span></div><div class='output co'>#&gt; $plot
-#&gt; 
-#&gt; $data
-#&gt;                     X           Y            Z
-#&gt; subject_1   -93.79049  -90.590755 -149.8324092
-#&gt; subject_2   -58.78947 -135.526235 -123.1239464
-#&gt; subject_3   -47.88005 -297.416106 -259.0735899
-#&gt; subject_4   285.54884   42.891286   99.4293559
-#&gt; subject_5   219.97810   40.431065   53.9742712
-#&gt; subject_6  -166.80371   41.589405  101.3328644
-#&gt; subject_7   -56.13490  -27.753980  204.8088764
-#&gt; subject_8   -26.25678  -40.077947   68.5394450
-#&gt; subject_9  -115.33578  -57.678079   45.8556971
-#&gt; subject_10  -59.78437 -138.244253  173.7078721
-#&gt; subject_11  -26.31887 -137.887646  228.6760136
-#&gt; subject_12  209.71313   79.893616   23.0178264
-#&gt; subject_13  -71.44406  100.027104  454.3822904
-#&gt; subject_14   80.81051   51.161266   97.9103081
-#&gt; subject_15  285.46516 -228.707421 -153.2634818
-#&gt; subject_16   26.83287  274.850465  100.4637204
-#&gt; subject_17 -163.86542  196.948831 -198.9661855
-#&gt; subject_18  244.56265  232.698422 -227.6007988
-#&gt; subject_19  262.50406 -264.361846 -174.7268368
-#&gt; subject_20  225.72992  192.590504 -213.5880384
-#&gt; subject_21 -184.05130   67.837373 -122.1181217
-#&gt; subject_22  -44.18571  138.420106  445.7159854
-#&gt; subject_23   11.36840 -154.818438   15.2363830
-#&gt; subject_24 -141.32190  236.380325   18.4395702
-#&gt; subject_25   27.20246 -207.145444   39.4301674
-#&gt; subject_26 -163.11214  133.801111 -102.4022140
-#&gt; subject_27  -72.52986 -264.243964 -229.9944366
-#&gt; subject_28 -167.83150  163.139126 -147.9951265
-#&gt; subject_29   10.25089 -196.897847 -111.0142201
-#&gt; subject_30  222.02002 -379.449678   92.5115214
-#&gt; subject_31  -30.23696  135.961758 -303.7868959
-#&gt; subject_32  -91.65629 -201.292314  157.2717579
-#&gt; subject_33 -120.50369  200.579740 -265.4766097
-#&gt; subject_34  -93.05029  128.144763  537.7214534
-#&gt; subject_35 -126.26651  125.970671  452.7827024
-#&gt; subject_36 -149.22175  282.618633    0.8866505
-#&gt; subject_37  -74.41525  256.836625   71.3575810
-#&gt; subject_38  -20.69591   14.895964   62.2966230
-#&gt; subject_39 -114.09287 -180.890022 -163.4255775
-#&gt; subject_40  178.73294    1.675347  -63.9076595
-#&gt; subject_41 -127.70366   -4.642105   66.6431994
-#&gt; subject_42 -149.85238  -10.205194 -158.2471367
-#&gt; subject_43   17.48320   90.752129 -273.1848383
-#&gt; subject_44   27.61062  226.138737   76.5603994
-#&gt; subject_45  202.63511 -388.329289   47.2030073
-#&gt; subject_46   57.13788   30.266747 -145.4384789
-#&gt; subject_47   88.82601   89.584620   63.6559686
-#&gt; subject_48   89.19547   64.290394 -180.2233843
-#&gt; subject_49 -122.06454 -266.751559   84.8473773
-#&gt; subject_50  105.58818   32.533990 -117.2689019
-#&gt; </div><div class='input'>
-</div></pre>
+<span class='no'>results</span> <span class='kw'>&lt;-</span> <span class='fu'>dimred_tsne</span>(<span class='no'>toy_data</span>,
+                       <span class='kw'>tax_level</span><span class='kw'>=</span><span class='st'>"phylum"</span>,
+                       <span class='kw'>color</span><span class='kw'>=</span><span class='st'>"AGE"</span>,
+                       <span class='kw'>shape</span><span class='kw'>=</span><span class='st'>"GROUP"</span>,
+                       <span class='kw'>k</span><span class='kw'>=</span><span class='st'>"3D"</span>,
+                       <span class='kw'>initial_dims</span><span class='kw'>=</span><span class='fl'>30</span>,
+                       <span class='kw'>perplexity</span><span class='kw'>=</span><span class='fl'>10</span>,
+                       <span class='kw'>datatype</span><span class='kw'>=</span><span class='st'>"logcpm"</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: the condition has length &gt; 1 and only the first element will be used</span></div><div class='output co'>#&gt; <span class='message'>sigma summary: Min. : 0.512599065767779 |1st Qu. : 0.633512978585265 |Median : 0.689297219210298 |Mean : 0.693244142454956 |3rd Qu. : 0.746970619913928 |Max. : 0.912172075133477 |</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #100 error is: 17.5527601116614</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #200 error is: 1.24507480596162</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #300 error is: 0.576592257543887</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #400 error is: 0.347454049345548</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #500 error is: 0.250975118340985</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #600 error is: 0.231231480751805</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #700 error is: 0.218904084428896</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #800 error is: 0.212953899514953</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #900 error is: 0.210685915592865</span></div><div class='output co'>#&gt; <span class='message'>Epoch: Iteration #1000 error is: 0.208776239231956</span></div><div class='input'><span class='no'>results</span>$<span class='no'>plot</span></div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -286,7 +230,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>
