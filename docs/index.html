@@ -41,7 +41,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.4.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.2</span>
       </span>
     </div>
 
@@ -150,6 +150,26 @@
 <div class="sourceCode"><pre class="r"><span class="kw">if</span> (!<span class="fu"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span>(<span class="st">"devtools"</span>, <span class="kw">quietly</span><span class="kw">=</span><span class="fl">TRUE</span>))
   <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"devtools"</span>)
 <span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"compbiomed/animalcules"</span>)</pre></div>
+<ul>
+<li>Build Docker image</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
+<span class="fu">git</span> clone https://github.com/compbiomed/animalcules
+<span class="bu">cd</span> animalcules
+<span class="ex">docker</span> build --tag cbm/animalcules:latest .</code></pre></div>
+<ul>
+<li>Pull from Docker Hub</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">docker</span> pull cbm/animalcules:latest</code></pre></div>
+<ul>
+<li>
+<p>Run with Docker</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">docker</span> run -d -p 8787:8787 -e PASSWORD=animalcules cbm/animalcules:latest</code></pre></div>
+</li>
+<li>Go to <a href="http://localhost:8787/" class="uri">http://localhost:8787/</a> in browser<br>
+</li>
+<li><p>Username: rstudio / Password animalcules</p></li>
+</ul>
 </div>
 <div id="run-animalcules-shiny-app" class="section level2">
 <h2 class="hasAnchor">
