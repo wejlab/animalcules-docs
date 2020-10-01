@@ -150,30 +150,31 @@
 <div class="sourceCode"><pre class="r"><span class="kw">if</span> (!<span class="fu"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span>(<span class="st">"devtools"</span>, <span class="kw">quietly</span><span class="kw">=</span><span class="fl">TRUE</span>))
   <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"devtools"</span>)
 <span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"compbiomed/animalcules"</span>)</pre></div>
+<p>Run the animalcules shiny app!</p>
+<div class="sourceCode"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">animalcules</span>)
+<span class="fu"><a href="reference/run_animalcules.html">run_animalcules</a></span>()</pre></div>
+</div>
+<div id="installing-w-docker" class="section level2">
+<h2 class="hasAnchor">
+<a href="#installing-w-docker" class="anchor"></a>Installing w/ Docker</h2>
+<p>First, make sure you have <a href="https://docs.docker.com/get-docker/">Docker installed</a> on your machine.</p>
 <ul>
-<li>Build Docker image</li>
+<li>Pull the pre-built Docker image</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
-<span class="fu">git</span> clone https://github.com/compbiomed/animalcules
+<pre><code>docker pull bucbm/animalcules:latest</code></pre>
+<ul>
+<li>Or if you’d like to build the Docker image from scratch</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> clone https://github.com/compbiomed/animalcules
 <span class="bu">cd</span> animalcules
-<span class="ex">docker</span> build --tag cbm/animalcules:latest .</code></pre></div>
-<ul>
-<li>Pull from Docker Hub</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">docker</span> pull cbm/animalcules:latest</code></pre></div>
+<span class="ex">docker</span> build --tag bucbm/animalcules:latest .</code></pre></div>
 <ul>
 <li>
 <p>Run with Docker</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">docker</span> run -d -p 8787:8787 -e PASSWORD=animalcules cbm/animalcules:latest</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">docker</span> run -d -p 8787:8787 -e PASSWORD=animalcules bucbm/animalcules:latest</code></pre></div>
 </li>
-<li>Go to <a href="http://localhost:8787/" class="uri">http://localhost:8787/</a> in browser<br>
-</li>
-<li><p>Username: rstudio / Password animalcules</p></li>
+<li><p>Go to <a href="http://localhost:8787/" class="uri">http://localhost:8787/</a> in browser and enter username: rstudio / password: animalcules. Then enter the following:</p></li>
 </ul>
-</div>
-<div id="run-animalcules-shiny-app" class="section level2">
-<h2 class="hasAnchor">
-<a href="#run-animalcules-shiny-app" class="anchor"></a>Run animalcules shiny app</h2>
 <div class="sourceCode"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">animalcules</span>)
 <span class="fu"><a href="reference/run_animalcules.html">run_animalcules</a></span>()</pre></div>
 </div>

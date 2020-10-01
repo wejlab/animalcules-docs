@@ -107,11 +107,12 @@
 
     
     
-<p>There are 7 data upload methods:</p>
+<p>There are 8 data upload methods:</p>
 <ul>
 <li>Count File (Mostly used for uploading new dataset)</li>
 <li>Example Data (For exploring animalcules)</li>
 <li>animalcules file (Re-upload previously uploaded dataset quickly)</li>
+<li>phyloseq object</li>
 <li>BIOM file</li>
 <li>Count file with taxonomy id (this is the option if taxonomy table is not available)</li>
 <li>Pathoscope File</li>
@@ -174,9 +175,9 @@
 <p>Running time: &lt; 0.5s</p>
 <p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/animalcules_file.PNG?raw=true" width="500"></p>
 </div>
-<div id="phyloseq-data" class="section level3">
+<div id="phyloseq-object" class="section level3">
 <h3 class="hasAnchor">
-<a href="#phyloseq-data" class="anchor"></a>Phyloseq data</h3>
+<a href="#phyloseq-object" class="anchor"></a>Phyloseq object</h3>
 <p>Phyloseq object can be easily read into animalcules with the following steps. Suppose the phyloseq object in R is called ‘physeq’. First, write count table, taxonomy table, and sample data table to csv files:</p>
 <div class="sourceCode"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">phyloseq</span>)
 <span class="fu"><a href="https://rdrr.io/r/utils/write.table.html">write.csv</a></span>(<span class="fu"><a href="https://rdrr.io/pkg/phyloseq/man/otu_table-methods.html">otu_table</a></span>(<span class="no">physeq</span>), <span class="st">"count.csv"</span>)
