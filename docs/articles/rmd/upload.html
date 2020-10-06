@@ -183,7 +183,23 @@
 <span class="fu"><a href="https://rdrr.io/r/utils/write.table.html">write.csv</a></span>(<span class="fu"><a href="https://rdrr.io/pkg/phyloseq/man/otu_table-methods.html">otu_table</a></span>(<span class="no">physeq</span>), <span class="st">"count.csv"</span>)
 <span class="fu"><a href="https://rdrr.io/r/utils/write.table.html">write.csv</a></span>(<span class="fu"><a href="https://rdrr.io/pkg/phyloseq/man/tax_table-methods.html">tax_table</a></span>(<span class="no">physeq</span>), <span class="st">"tax.csv"</span>)
 <span class="fu"><a href="https://rdrr.io/r/utils/write.table.html">write.csv</a></span>(<span class="fu"><a href="https://rdrr.io/pkg/phyloseq/man/sample_data-methods.html">sample_data</a></span>(<span class="no">physeq</span>), <span class="st">"sample.csv"</span>)</pre></body></html></div>
-<p>Then, follow the same count file upload steps as shown above with the three csv files.</p>
+<p>Then, follow the same ‘count file’ upload steps as shown above with the three csv files.</p>
+<p>To generate a phyloseq object from the animalcules MAE object is also very simple:</p>
+<div class="sourceCode"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"phyloseq"</span>)
+
+<span class="co"># Extract data</span>
+<span class="no">microbe</span> <span class="kw">&lt;-</span> <span class="no">MAE</span><span class="kw">[[</span><span class="st">"MicrobeGenetics"</span>]]
+
+<span class="co"># host &lt;- MAE[['HostGenetics']]</span>
+<span class="no">tax_table</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span>(<span class="fu">rowData</span>(<span class="no">microbe</span>)))  <span class="co"># organism x taxlev</span>
+<span class="no">sam_table</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span>(<span class="fu">colData</span>(<span class="no">microbe</span>)) <span class="co"># sample x condition</span>
+<span class="no">counts_table</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span>(<span class="fu">assays</span>(<span class="no">microbe</span>))[, <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span>(<span class="no">sam_table</span>)])  <span class="co"># organism x sample</span>
+
+<span class="co"># build phyloseq objecy</span>
+<span class="no">OTU</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/pkg/phyloseq/man/otu_table-methods.html">otu_table</a></span>(<span class="no">counts_table</span>, <span class="kw">taxa_are_rows</span> <span class="kw">=</span> <span class="fl">TRUE</span>)
+<span class="no">TAX</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/pkg/phyloseq/man/tax_table-methods.html">tax_table</a></span>(<span class="no">tax_table</span>)
+<span class="no">SAM</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/pkg/phyloseq/man/sample_data-methods.html">sample_data</a></span>(<span class="no">sam_table</span>)
+<span class="no">physeq</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/pkg/phyloseq/man/phyloseq.html">phyloseq</a></span>(<span class="no">OTU</span>, <span class="no">TAX</span>, <span class="no">SAM</span>)</pre></body></html></div>
 </div>
 <div id="biom-file" class="section level3">
 <h3 class="hasAnchor">
