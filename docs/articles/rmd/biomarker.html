@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.0</span>
       </span>
     </div>
 
@@ -94,7 +94,8 @@
 
       
 
-      </header><div class="row">
+      </header><link href="biomarker_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
+<script src="biomarker_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Biomarker</h1>
@@ -111,10 +112,10 @@
 <h3 class="hasAnchor">
 <a href="#run-biomarker" class="anchor"></a>Run Biomarker</h3>
 <p>To identify biomarkers for a specific binary classification problem, users need to specify the taxonomy level and target variable. In the Advanced Options, users could also specify the number of CV repeats, number of CV folds, and top biomarker proportion. For example, with a 3-repeats 3-fold cross validation, animalcules will randomly split the dataset into 3 fold and run CV, then this procedure is repeated 3 times (each time has different random data split). The top biomarker proportion defines the threshold for selecting biomarkers: animalcules will generate an classification model based importance score for each microbe/feature, and will choose the top 20% (suppose the proportion is 0.2 as default) features as the biomarkers.</p>
-<p>Also, users could choose binary classification models including logistic regression and random forest. After clicking the button “Run”, the biomarker list will shouw up at the right-hand side.</p>
+<p>Also, users could choose binary classification models including logistic regression and random forest. After clicking the button "Run", the biomarker list will shouw up at the right-hand side.</p>
 <p>Note:</p>
 <ul>
-<li>If the dataset is too small or unbalanced, cross-validation can’t be applied. You will see error messages like: NA/NaN/Inf in foreign function call.</li>
+<li>If the dataset is too small or unbalanced, cross-validation can't be applied. You will see error messages like: NA/NaN/Inf in foreign function call.</li>
 <li>The target variable can not contain any special characters, otherwise there will be an error.</li>
 </ul>
 <p>Instructions:</p>
@@ -125,7 +126,7 @@
 <li>(Optional) Select number of CV repeats (default: 3).</li>
 <li>(Optional) Select top biomarker proportion based on importance score (default: 0.2, representing 20%).</li>
 <li>(Optional) Select model (default: logistic regression).</li>
-<li>Click the button “Run”</li>
+<li>Click the button "Run"</li>
 </ul>
 <p>Running time:</p>
 <ul>
@@ -167,7 +168,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.0</span>
       </span>
     </div>
 
@@ -147,16 +147,16 @@
     <p>Dimensionality reduction through PCoA</p>
     </div>
 
-    <pre class="usage"><span class='fu'>dimred_pcoa</span>(
-  <span class='no'>MAE</span>,
-  <span class='no'>tax_level</span>,
-  <span class='no'>color</span>,
-  <span class='kw'>shape</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>axx</span> <span class='kw'>=</span> <span class='fl'>1</span>,
-  <span class='kw'>axy</span> <span class='kw'>=</span> <span class='fl'>2</span>,
-  <span class='kw'>axz</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>method</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"bray"</span>, <span class='st'>"jaccard"</span>)
-)</pre>
+    <pre class="usage"><span class='fu'>dimred_pcoa</span><span class='op'>(</span>
+  <span class='va'>MAE</span>,
+  <span class='va'>tax_level</span>,
+  <span class='va'>color</span>,
+  shape <span class='op'>=</span> <span class='cn'>NULL</span>,
+  axx <span class='op'>=</span> <span class='fl'>1</span>,
+  axy <span class='op'>=</span> <span class='fl'>2</span>,
+  axz <span class='op'>=</span> <span class='cn'>NULL</span>,
+  method <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"bray"</span>, <span class='st'>"jaccard"</span><span class='op'>)</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -200,67 +200,68 @@
     <p>A list with a plotly object and summary table</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>data_dir</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"extdata/MAE.rds"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"animalcules"</span>)
-<span class='no'>toy_data</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readRDS.html'>readRDS</a></span>(<span class='no'>data_dir</span>)
-<span class='no'>result</span> <span class='kw'>&lt;-</span> <span class='fu'>dimred_pcoa</span>(<span class='no'>toy_data</span>,
-                      <span class='kw'>tax_level</span><span class='kw'>=</span><span class='st'>"genus"</span>,
-                      <span class='kw'>color</span><span class='kw'>=</span><span class='st'>"AGE"</span>,
-                      <span class='kw'>shape</span><span class='kw'>=</span><span class='st'>"DISEASE"</span>,
-                      <span class='kw'>axx</span><span class='kw'>=</span><span class='fl'>1</span>,
-                      <span class='kw'>axy</span><span class='kw'>=</span><span class='fl'>2</span>,
-                      <span class='kw'>method</span><span class='kw'>=</span><span class='st'>"bray"</span>)
-<span class='no'>result</span>$<span class='no'>plot</span>
-<span class='no'>result</span>$<span class='no'>table</span></div><div class='output co'>#&gt;            Axis Eigenvalue Variance Explained Cumulative Variance
-#&gt; Axis.1   Axis.1    3.64000                20%                 20%
-#&gt; Axis.2   Axis.2    2.86000                16%                 35%
-#&gt; Axis.3   Axis.3    1.72000                10%                 45%
-#&gt; Axis.4   Axis.4    0.86100                 5%                 50%
-#&gt; Axis.5   Axis.5    0.84600                 5%                 55%
-#&gt; Axis.6   Axis.6    0.70900                 4%                 59%
-#&gt; Axis.7   Axis.7    0.54700                 3%                 62%
-#&gt; Axis.8   Axis.8    0.46200                 3%                 65%
-#&gt; Axis.9   Axis.9    0.44700                 3%                 68%
-#&gt; Axis.10 Axis.10    0.37200                 2%                 70%
-#&gt; Axis.11 Axis.11    0.35600                 2%                 73%
-#&gt; Axis.12 Axis.12    0.29200                 2%                 75%
-#&gt; Axis.13 Axis.13    0.26300                 2%                 77%
-#&gt; Axis.14 Axis.14    0.22100                 2%                 78%
-#&gt; Axis.15 Axis.15    0.20900                 2%                 80%
-#&gt; Axis.16 Axis.16    0.18300                 1%                 81%
-#&gt; Axis.17 Axis.17    0.15800                 1%                 83%
-#&gt; Axis.18 Axis.18    0.11800                 1%                 84%
-#&gt; Axis.19 Axis.19    0.10200                 1%                 85%
-#&gt; Axis.20 Axis.20    0.09600                 1%                 86%
-#&gt; Axis.21 Axis.21    0.08950                 1%                 87%
-#&gt; Axis.22 Axis.22    0.06490                 1%                 88%
-#&gt; Axis.23 Axis.23    0.05360                 1%                 88%
-#&gt; Axis.24 Axis.24    0.05060                 1%                 89%
-#&gt; Axis.25 Axis.25    0.04230                 1%                 90%
-#&gt; Axis.26 Axis.26    0.03470                 1%                 91%
-#&gt; Axis.27 Axis.27    0.03200                 1%                 91%
-#&gt; Axis.28 Axis.28    0.02380                 1%                 92%
-#&gt; Axis.29 Axis.29    0.01850                 1%                 92%
-#&gt; Axis.30 Axis.30    0.01400                 1%                 93%
-#&gt; Axis.31 Axis.31    0.00684                 1%                 93%
-#&gt; Axis.32 Axis.32    0.00553                 1%                 94%
-#&gt; Axis.33 Axis.33    0.00363                 1%                 95%
-#&gt; Axis.34 Axis.34    0.00242                 1%                 95%
-#&gt; Axis.35 Axis.35    0.00000                 0%                 96%
-#&gt; Axis.36 Axis.36   -0.00034                 0%                 96%
-#&gt; Axis.37 Axis.37   -0.00286                 0%                 96%
-#&gt; Axis.38 Axis.38   -0.00871                 0%                 97%
-#&gt; Axis.39 Axis.39   -0.00904                 0%                 97%
-#&gt; Axis.40 Axis.40   -0.01270                 0%                 98%
-#&gt; Axis.41 Axis.41   -0.01900                 0%                 98%
-#&gt; Axis.42 Axis.42   -0.02240                 0%                 98%
-#&gt; Axis.43 Axis.43   -0.02610                 0%                 99%
-#&gt; Axis.44 Axis.44   -0.03120                 0%                 99%
-#&gt; Axis.45 Axis.45   -0.03810                 0%                 99%
-#&gt; Axis.46 Axis.46   -0.04170                 0%                100%
-#&gt; Axis.47 Axis.47   -0.04480                 0%                100%
-#&gt; Axis.48 Axis.48   -0.04820                 0%                100%
-#&gt; Axis.49 Axis.49   -0.05610                 0%                100%
-#&gt; Axis.50 Axis.50   -0.09340                 0%                100%</div><div class='input'>
+    <pre class="examples"><div class='input'><span class='va'>data_dir</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"extdata/MAE.rds"</span>, package <span class='op'>=</span> <span class='st'>"animalcules"</span><span class='op'>)</span>
+<span class='va'>toy_data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readRDS.html'>readRDS</a></span><span class='op'>(</span><span class='va'>data_dir</span><span class='op'>)</span>
+<span class='va'>result</span> <span class='op'>&lt;-</span> <span class='fu'>dimred_pcoa</span><span class='op'>(</span><span class='va'>toy_data</span>,
+                      tax_level<span class='op'>=</span><span class='st'>"genus"</span>,
+                      color<span class='op'>=</span><span class='st'>"AGE"</span>,
+                      shape<span class='op'>=</span><span class='st'>"DISEASE"</span>,
+                      axx<span class='op'>=</span><span class='fl'>1</span>,
+                      axy<span class='op'>=</span><span class='fl'>2</span>,
+                      method<span class='op'>=</span><span class='st'>"bray"</span><span class='op'>)</span>
+<span class='va'>result</span><span class='op'>$</span><span class='va'>plot</span>
+<span class='va'>result</span><span class='op'>$</span><span class='va'>table</span>
+</div><div class='output co'>#&gt;            Axis Eigenvalue Variance Explained Cumulative Variance
+#&gt; Axis.1   Axis.1    3.64000           19.6142%              19.61%
+#&gt; Axis.2   Axis.2    2.86000           15.5122%              35.13%
+#&gt; Axis.3   Axis.3    1.72000            9.5218%              44.65%
+#&gt; Axis.4   Axis.4    0.86100            5.0201%              49.67%
+#&gt; Axis.5   Axis.5    0.84600            4.9398%              54.61%
+#&gt; Axis.6   Axis.6    0.70900            4.2222%              58.83%
+#&gt; Axis.7   Axis.7    0.54700            3.3659%              62.20%
+#&gt; Axis.8   Axis.8    0.46200            2.9214%              65.12%
+#&gt; Axis.9   Axis.9    0.44700            2.8404%              67.96%
+#&gt; Axis.10 Axis.10    0.37200            2.4476%              70.41%
+#&gt; Axis.11 Axis.11    0.35600            2.3656%              72.77%
+#&gt; Axis.12 Axis.12    0.29200            2.0247%              74.80%
+#&gt; Axis.13 Axis.13    0.26300            1.8742%              76.67%
+#&gt; Axis.14 Axis.14    0.22100            1.6526%              78.32%
+#&gt; Axis.15 Axis.15    0.20900            1.5909%              79.91%
+#&gt; Axis.16 Axis.16    0.18300            1.4556%              81.37%
+#&gt; Axis.17 Axis.17    0.15800            1.3222%              82.69%
+#&gt; Axis.18 Axis.18    0.11800            1.1105%              83.80%
+#&gt; Axis.19 Axis.19    0.10200            1.0283%              84.83%
+#&gt; Axis.20 Axis.20    0.09600            0.9958%              85.83%
+#&gt; Axis.21 Axis.21    0.08950            0.9619%              86.79%
+#&gt; Axis.22 Axis.22    0.06490            0.8323%              87.62%
+#&gt; Axis.23 Axis.23    0.05360            0.7731%              88.39%
+#&gt; Axis.24 Axis.24    0.05060            0.7572%              89.15%
+#&gt; Axis.25 Axis.25    0.04230            0.7133%              89.86%
+#&gt; Axis.26 Axis.26    0.03470            0.6733%              90.54%
+#&gt; Axis.27 Axis.27    0.03200            0.6591%              91.20%
+#&gt; Axis.28 Axis.28    0.02380            0.6159%              91.81%
+#&gt; Axis.29 Axis.29    0.01850            0.5881%              92.40%
+#&gt; Axis.30 Axis.30    0.01400            0.5648%              92.97%
+#&gt; Axis.31 Axis.31    0.00684            0.5270%              93.49%
+#&gt; Axis.32 Axis.32    0.00553            0.5201%              94.01%
+#&gt; Axis.33 Axis.33    0.00363            0.5101%              94.52%
+#&gt; Axis.34 Axis.34    0.00242            0.5038%              95.03%
+#&gt; Axis.35 Axis.35    0.00000            0.4892%              95.52%
+#&gt; Axis.36 Axis.36   -0.00034            0.4760%              95.99%
+#&gt; Axis.37 Axis.37   -0.00286            0.4452%              96.44%
+#&gt; Axis.38 Axis.38   -0.00871            0.4435%              96.88%
+#&gt; Axis.39 Axis.39   -0.00904            0.4244%              97.30%
+#&gt; Axis.40 Axis.40   -0.01270            0.3910%              97.70%
+#&gt; Axis.41 Axis.41   -0.01900            0.3734%              98.07%
+#&gt; Axis.42 Axis.42   -0.02240            0.3538%              98.42%
+#&gt; Axis.43 Axis.43   -0.02610            0.3267%              98.75%
+#&gt; Axis.44 Axis.44   -0.03120            0.2905%              99.04%
+#&gt; Axis.45 Axis.45   -0.03810            0.2716%              99.31%
+#&gt; Axis.46 Axis.46   -0.04170            0.2553%              99.57%
+#&gt; Axis.47 Axis.47   -0.04480            0.2373%              99.80%
+#&gt; Axis.48 Axis.48   -0.04820            0.1962%             100.00%
+#&gt; Axis.49 Axis.49   -0.05610            0.0000%             100.00%
+#&gt; Axis.50 Axis.50   -0.09340            0.0000%             100.00%</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -277,7 +278,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

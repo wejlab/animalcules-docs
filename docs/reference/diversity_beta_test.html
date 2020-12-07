@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.0</span>
       </span>
     </div>
 
@@ -147,14 +147,14 @@
     <p>Beta diversity test (by default we use bray-curtis distance)</p>
     </div>
 
-    <pre class="usage"><span class='fu'>diversity_beta_test</span>(
-  <span class='no'>MAE</span>,
-  <span class='no'>tax_level</span>,
-  <span class='no'>input_beta_method</span>,
-  <span class='no'>input_select_beta_condition</span>,
-  <span class='no'>input_select_beta_stat_method</span>,
-  <span class='kw'>input_num_permutation_permanova</span> <span class='kw'>=</span> <span class='fl'>999</span>
-)</pre>
+    <pre class="usage"><span class='fu'>diversity_beta_test</span><span class='op'>(</span>
+  <span class='va'>MAE</span>,
+  <span class='va'>tax_level</span>,
+  <span class='va'>input_beta_method</span>,
+  <span class='va'>input_select_beta_condition</span>,
+  <span class='va'>input_select_beta_stat_method</span>,
+  input_num_permutation_permanova <span class='op'>=</span> <span class='fl'>999</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -190,20 +190,21 @@
     <p>A plotly object</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>data_dir</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'extdata/MAE.rds'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'animalcules'</span>)
-<span class='no'>toy_data</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readRDS.html'>readRDS</a></span>(<span class='no'>data_dir</span>)
-<span class='no'>p</span> <span class='kw'>&lt;-</span> <span class='fu'>diversity_beta_test</span>(<span class='no'>toy_data</span>,
-                         <span class='kw'>tax_level</span> <span class='kw'>=</span> <span class='st'>'genus'</span>,
-                         <span class='kw'>input_beta_method</span> <span class='kw'>=</span> <span class='st'>'bray'</span>,
-                         <span class='kw'>input_select_beta_condition</span> <span class='kw'>=</span> <span class='st'>'DISEASE'</span>,
-                         <span class='kw'>input_select_beta_stat_method</span> <span class='kw'>=</span> <span class='st'>'PERMANOVA'</span>,
-                         <span class='kw'>input_num_permutation_permanova</span> <span class='kw'>=</span> <span class='fl'>999</span>)
-<span class='no'>p</span></div><div class='output co'>#&gt; Permutation test for adonis under reduced model
+    <pre class="examples"><div class='input'><span class='va'>data_dir</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>'extdata/MAE.rds'</span>, package <span class='op'>=</span> <span class='st'>'animalcules'</span><span class='op'>)</span>
+<span class='va'>toy_data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readRDS.html'>readRDS</a></span><span class='op'>(</span><span class='va'>data_dir</span><span class='op'>)</span>
+<span class='va'>p</span> <span class='op'>&lt;-</span> <span class='fu'>diversity_beta_test</span><span class='op'>(</span><span class='va'>toy_data</span>,
+                         tax_level <span class='op'>=</span> <span class='st'>'genus'</span>,
+                         input_beta_method <span class='op'>=</span> <span class='st'>'bray'</span>,
+                         input_select_beta_condition <span class='op'>=</span> <span class='st'>'DISEASE'</span>,
+                         input_select_beta_stat_method <span class='op'>=</span> <span class='st'>'PERMANOVA'</span>,
+                         input_num_permutation_permanova <span class='op'>=</span> <span class='fl'>999</span><span class='op'>)</span>
+<span class='va'>p</span>
+</div><div class='output co'>#&gt; Permutation test for adonis under reduced model
 #&gt; Terms added sequentially (first to last)
 #&gt; Permutation: free
 #&gt; Number of permutations: 999
 #&gt; 
-#&gt; vegan::adonis2(formula = dist.mat ~ condition, data = sam_table, permutations = input_num_permutation_permanova, strata = "PLOT")
+#&gt; vegan::adonis2(formula = dist.mat ~ condition, data = sam_table, permutations = input_num_permutation_permanova)
 #&gt;           Df SumOfSqs      R2      F Pr(&gt;F)
 #&gt; condition  1   0.2286 0.01583 0.7722  0.619
 #&gt; Residual  48  14.2108 0.98417              
@@ -224,7 +225,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

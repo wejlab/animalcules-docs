@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.0</span>
       </span>
     </div>
 
@@ -147,21 +147,21 @@
     <p>Dimensionality reduction through PCA</p>
     </div>
 
-    <pre class="usage"><span class='fu'>dimred_umap</span>(
-  <span class='no'>MAE</span>,
-  <span class='no'>tax_level</span>,
-  <span class='no'>color</span>,
-  <span class='kw'>shape</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>cx</span> <span class='kw'>=</span> <span class='fl'>1</span>,
-  <span class='kw'>cy</span> <span class='kw'>=</span> <span class='fl'>2</span>,
-  <span class='kw'>cz</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>n_neighbors</span> <span class='kw'>=</span> <span class='fl'>15</span>,
-  <span class='kw'>metric</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"euclidean"</span>, <span class='st'>"manhattan"</span>),
-  <span class='kw'>n_epochs</span> <span class='kw'>=</span> <span class='fl'>200</span>,
-  <span class='kw'>init</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"spectral"</span>, <span class='st'>"random"</span>),
-  <span class='kw'>min_dist</span> <span class='kw'>=</span> <span class='fl'>0.1</span>,
-  <span class='kw'>datatype</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"logcpm"</span>, <span class='st'>"relabu"</span>, <span class='st'>"counts"</span>)
-)</pre>
+    <pre class="usage"><span class='fu'>dimred_umap</span><span class='op'>(</span>
+  <span class='va'>MAE</span>,
+  <span class='va'>tax_level</span>,
+  <span class='va'>color</span>,
+  shape <span class='op'>=</span> <span class='cn'>NULL</span>,
+  cx <span class='op'>=</span> <span class='fl'>1</span>,
+  cy <span class='op'>=</span> <span class='fl'>2</span>,
+  cz <span class='op'>=</span> <span class='cn'>NULL</span>,
+  n_neighbors <span class='op'>=</span> <span class='fl'>15</span>,
+  metric <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"euclidean"</span>, <span class='st'>"manhattan"</span><span class='op'>)</span>,
+  n_epochs <span class='op'>=</span> <span class='fl'>200</span>,
+  init <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"spectral"</span>, <span class='st'>"random"</span><span class='op'>)</span>,
+  min_dist <span class='op'>=</span> <span class='fl'>0.1</span>,
+  datatype <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"logcpm"</span>, <span class='st'>"relabu"</span>, <span class='st'>"counts"</span><span class='op'>)</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -225,16 +225,18 @@
     <p>A list with a plotly object and summary table</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>data_dir</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"extdata/MAE.rds"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"animalcules"</span>)
-<span class='no'>toy_data</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readRDS.html'>readRDS</a></span>(<span class='no'>data_dir</span>)
-<span class='no'>result</span> <span class='kw'>&lt;-</span> <span class='fu'>dimred_umap</span>(<span class='no'>toy_data</span>,
-                      <span class='kw'>tax_level</span><span class='kw'>=</span><span class='st'>"genus"</span>,
-                      <span class='kw'>color</span><span class='kw'>=</span><span class='st'>"AGE"</span>,
-                      <span class='kw'>shape</span><span class='kw'>=</span><span class='st'>"DISEASE"</span>,
-                      <span class='kw'>cx</span><span class='kw'>=</span><span class='fl'>1</span>,
-                      <span class='kw'>cy</span><span class='kw'>=</span><span class='fl'>2</span>,
-                      <span class='kw'>datatype</span><span class='kw'>=</span><span class='st'>"logcpm"</span>)
-<span class='no'>result</span>$<span class='no'>plot</span></div></pre>
+    <pre class="examples"><div class='input'><span class='va'>data_dir</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"extdata/MAE.rds"</span>, package <span class='op'>=</span> <span class='st'>"animalcules"</span><span class='op'>)</span>
+<span class='va'>toy_data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readRDS.html'>readRDS</a></span><span class='op'>(</span><span class='va'>data_dir</span><span class='op'>)</span>
+<span class='va'>result</span> <span class='op'>&lt;-</span> <span class='fu'>dimred_umap</span><span class='op'>(</span><span class='va'>toy_data</span>,
+                      tax_level<span class='op'>=</span><span class='st'>"genus"</span>,
+                      color<span class='op'>=</span><span class='st'>"AGE"</span>,
+                      shape<span class='op'>=</span><span class='st'>"DISEASE"</span>,
+                      cx<span class='op'>=</span><span class='fl'>1</span>,
+                      cy<span class='op'>=</span><span class='fl'>2</span>,
+                      datatype<span class='op'>=</span><span class='st'>"logcpm"</span><span class='op'>)</span>
+<span class='va'>result</span><span class='op'>$</span><span class='va'>plot</span>
+
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -250,7 +252,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

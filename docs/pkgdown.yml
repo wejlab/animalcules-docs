@@ -1,14 +1,14 @@
 pandoc: 1.19.2.1
-pkgdown: 1.5.1
+pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   animalcules: animalcules.html
-  abundance: rmd/abundance.html
-  biomarker: rmd/biomarker.html
-  differential: rmd/differential.html
-  dimension: rmd/dimension.html
-  diversity: rmd/diversity.html
-  summary: rmd/summary.html
-  upload: rmd/upload.html
-last_built: 2020-10-06T19:35Z
+  rmd/abundance: abundance.html
+  rmd/biomarker: biomarker.html
+  rmd/differential: differential.html
+  rmd/dimension: dimension.html
+  rmd/diversity: diversity.html
+  rmd/summary: summary.html
+  rmd/upload: upload.html
+last_built: 2020-12-07T03:45Z
 
