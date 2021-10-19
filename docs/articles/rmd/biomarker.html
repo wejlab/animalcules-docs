@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Biomarker • animalcules</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../../bootstrap-toc.css">
 <script src="../../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -31,56 +31,59 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.9.3</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="../../index.html">Home</a>
+  <a href="../../index.html">
+    <span class="fas fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="../../articles/animalcules.html">Get started</a>
+</li>
+<li>
+  <a href="../../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Interactive Shiny Analysis
+    Articles
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../../articles/rmd/upload.html">1: Upload</a>
+      <a href="../../articles/rmd/abundance.html">Abundance</a>
     </li>
     <li>
-      <a href="../../articles/rmd/summary.html">2: Data Summary and Filtering</a>
+      <a href="../../articles/rmd/biomarker.html">Biomarker</a>
     </li>
     <li>
-      <a href="../../articles/rmd/abundance.html">3: Abundance</a>
+      <a href="../../articles/rmd/differential.html">Differential Analysis</a>
     </li>
     <li>
-      <a href="../../articles/rmd/diversity.html">4: Diversity</a>
+      <a href="../../articles/rmd/dimension.html">Dimension Reduction</a>
     </li>
     <li>
-      <a href="../../articles/rmd/dimension.html">5: Dimension Reduction</a>
+      <a href="../../articles/rmd/diversity.html">Diversity</a>
     </li>
     <li>
-      <a href="../../articles/rmd/differential.html">6: Differential Analysis</a>
+      <a href="../../articles/rmd/summary.html">Summary and Filter</a>
     </li>
     <li>
-      <a href="../../articles/rmd/biomarker.html">7: Biomarker</a>
+      <a href="../../articles/rmd/upload.html">Upload</a>
     </li>
   </ul>
-</li>
-<li>
-  <a href="../../articles/animalcules.html">Command Line Analysis</a>
-</li>
-<li>
-  <a href="../../reference/index.html">Reference</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/compbiomed/animalcules">
-    <span class="fa fa-github"></span>
+  <a href="https://github.com/compbiomed/animalcules/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -94,8 +97,7 @@
 
       
 
-      </header><link href="biomarker_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
-<script src="biomarker_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
+      </header><script src="biomarker_files/header-attrs-2.8/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Biomarker</h1>
@@ -112,10 +114,10 @@
 <h3 class="hasAnchor">
 <a href="#run-biomarker" class="anchor"></a>Run Biomarker</h3>
 <p>To identify biomarkers for a specific binary classification problem, users need to specify the taxonomy level and target variable. In the Advanced Options, users could also specify the number of CV repeats, number of CV folds, and top biomarker proportion. For example, with a 3-repeats 3-fold cross validation, animalcules will randomly split the dataset into 3 fold and run CV, then this procedure is repeated 3 times (each time has different random data split). The top biomarker proportion defines the threshold for selecting biomarkers: animalcules will generate an classification model based importance score for each microbe/feature, and will choose the top 20% (suppose the proportion is 0.2 as default) features as the biomarkers.</p>
-<p>Also, users could choose binary classification models including logistic regression and random forest. After clicking the button "Run", the biomarker list will shouw up at the right-hand side.</p>
+<p>Also, users could choose binary classification models including logistic regression and random forest. After clicking the button “Run”, the biomarker list will shouw up at the right-hand side.</p>
 <p>Note:</p>
 <ul>
-<li>If the dataset is too small or unbalanced, cross-validation can't be applied. You will see error messages like: NA/NaN/Inf in foreign function call.</li>
+<li>If the dataset is too small or unbalanced, cross-validation can’t be applied. You will see error messages like: NA/NaN/Inf in foreign function call.</li>
 <li>The target variable can not contain any special characters, otherwise there will be an error.</li>
 </ul>
 <p>Instructions:</p>
@@ -126,32 +128,26 @@
 <li>(Optional) Select number of CV repeats (default: 3).</li>
 <li>(Optional) Select top biomarker proportion based on importance score (default: 0.2, representing 20%).</li>
 <li>(Optional) Select model (default: logistic regression).</li>
-<li>Click the button "Run"</li>
+<li>Click the button “Run”</li>
 </ul>
 <p>Running time:</p>
 <ul>
 <li>Test dataset with 30 samples and 427 microbes: 8.5s</li>
 <li>Test dataset with 587 samples and 203 microbes: 32.4s</li>
 </ul>
-<div class="figure">
-<img src="https://github.com/compbiomed/materials/blob/master/animalcules/fig_039.png?raw=true">
-</div>
+<p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/fig_039.png?raw=true"></p>
 </div>
 <div id="importance-plot" class="section level3">
 <h3 class="hasAnchor">
 <a href="#importance-plot" class="anchor"></a>Importance Plot</h3>
 <p>Ranked feature importance score plot for the identified biomarkers is showed here. The higher score is, the more important this feature (species, genus, ..) is regarding the prediction power.</p>
-<div class="figure">
-<img src="https://github.com/compbiomed/materials/blob/master/animalcules/fig_040.png?raw=true">
-</div>
+<p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/fig_040.png?raw=true"></p>
 </div>
 <div id="cv-roc-plot" class="section level3">
 <h3 class="hasAnchor">
 <a href="#cv-roc-plot" class="anchor"></a>CV ROC Plot</h3>
 <p>The identified biomarkers were used to re-train the model via a cross-validation, and ROC plot is showed automatically in this subtab.</p>
-<div class="figure">
-<img src="https://github.com/compbiomed/materials/blob/master/animalcules/fig_041.png?raw=true">
-</div>
+<p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/fig_041.png?raw=true"></p>
 </div>
   </div>
 

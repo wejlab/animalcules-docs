@@ -12,8 +12,8 @@
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
 
@@ -72,56 +72,59 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.9.3</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">Home</a>
+  <a href="../index.html">
+    <span class="fas fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="../articles/animalcules.html">Get started</a>
+</li>
+<li>
+  <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Interactive Shiny Analysis
+    Articles
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/rmd/upload.html">1: Upload</a>
+      <a href="../articles/rmd/abundance.html">Abundance</a>
     </li>
     <li>
-      <a href="../articles/rmd/summary.html">2: Data Summary and Filtering</a>
+      <a href="../articles/rmd/biomarker.html">Biomarker</a>
     </li>
     <li>
-      <a href="../articles/rmd/abundance.html">3: Abundance</a>
+      <a href="../articles/rmd/differential.html">Differential Analysis</a>
     </li>
     <li>
-      <a href="../articles/rmd/diversity.html">4: Diversity</a>
+      <a href="../articles/rmd/dimension.html">Dimension Reduction</a>
     </li>
     <li>
-      <a href="../articles/rmd/dimension.html">5: Dimension Reduction</a>
+      <a href="../articles/rmd/diversity.html">Diversity</a>
     </li>
     <li>
-      <a href="../articles/rmd/differential.html">6: Differential Analysis</a>
+      <a href="../articles/rmd/summary.html">Summary and Filter</a>
     </li>
     <li>
-      <a href="../articles/rmd/biomarker.html">7: Biomarker</a>
+      <a href="../articles/rmd/upload.html">Upload</a>
     </li>
   </ul>
-</li>
-<li>
-  <a href="../articles/animalcules.html">Command Line Analysis</a>
-</li>
-<li>
-  <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/compbiomed/animalcules">
-    <span class="fa fa-github"></span>
+  <a href="https://github.com/compbiomed/animalcules/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -203,22 +206,25 @@
     <pre class="examples"><div class='input'><span class='va'>data_dir</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>'extdata/MAE.rds'</span>, package <span class='op'>=</span> <span class='st'>'animalcules'</span><span class='op'>)</span>
 <span class='va'>toy_data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readRDS.html'>readRDS</a></span><span class='op'>(</span><span class='va'>data_dir</span><span class='op'>)</span>
 <span class='va'>p</span> <span class='op'>&lt;-</span> <span class='fu'>find_biomarker</span><span class='op'>(</span><span class='va'>toy_data</span>,
-                    tax_level<span class='op'>=</span><span class='st'>'genus'</span>,
+                    tax_level<span class='op'>=</span><span class='st'>'family'</span>,
                     input_select_target_biomarker<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'DISEASE'</span><span class='op'>)</span>,
                     nfolds <span class='op'>=</span> <span class='fl'>3</span>,
                     nrepeats <span class='op'>=</span> <span class='fl'>3</span>,
                     seed <span class='op'>=</span> <span class='fl'>99</span>,
                     percent_top_biomarker <span class='op'>=</span> <span class='fl'>0.2</span>,
                     model_name <span class='op'>=</span> <span class='st'>'logistic regression'</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='message'>Loading required package: lattice</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: ggplot2</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: grid</span></div><div class='input'><span class='va'>p</span>
+</div><div class='output co'>#&gt; <span class='message'>Loading required package: lattice</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: ggplot2</span></div><div class='input'><span class='va'>p</span>
 </div><div class='output co'>#&gt; $biomarker
-#&gt;   biomarker_list
-#&gt; 1   Gloeophyllum
-#&gt; 2 Herbaspirillum
-#&gt; 3    Aspergillus
-#&gt; 4     Acidovorax
-#&gt; 5     Malassezia
-#&gt; 6     Prevotella
+#&gt;        biomarker_list
+#&gt; 1 Geodermatophilaceae
+#&gt; 2  Intrasporangiaceae
+#&gt; 3       Didymellaceae
+#&gt; 4   Streptomycetaceae
+#&gt; 5      Coccodiniaceae
+#&gt; 6         Nectriaceae
+#&gt; 7   Staphylococcaceae
+#&gt; 8       Moraxellaceae
+#&gt; 9      Malasseziaceae
 #&gt; 
 #&gt; $importance_plot</div><div class='img'><img src='find_biomarker-1.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt; 
 #&gt; $roc_plot</div><div class='img'><img src='find_biomarker-2.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt; </div><div class='input'>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Interactive microbiome analysis toolkit • animalcules</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -41,56 +41,59 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.9.3</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">Home</a>
+  <a href="index.html">
+    <span class="fas fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="articles/animalcules.html">Get started</a>
+</li>
+<li>
+  <a href="reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Interactive Shiny Analysis
+    Articles
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="articles/rmd/upload.html">1: Upload</a>
+      <a href="articles/rmd/abundance.html">Abundance</a>
     </li>
     <li>
-      <a href="articles/rmd/summary.html">2: Data Summary and Filtering</a>
+      <a href="articles/rmd/biomarker.html">Biomarker</a>
     </li>
     <li>
-      <a href="articles/rmd/abundance.html">3: Abundance</a>
+      <a href="articles/rmd/differential.html">Differential Analysis</a>
     </li>
     <li>
-      <a href="articles/rmd/diversity.html">4: Diversity</a>
+      <a href="articles/rmd/dimension.html">Dimension Reduction</a>
     </li>
     <li>
-      <a href="articles/rmd/dimension.html">5: Dimension Reduction</a>
+      <a href="articles/rmd/diversity.html">Diversity</a>
     </li>
     <li>
-      <a href="articles/rmd/differential.html">6: Differential Analysis</a>
+      <a href="articles/rmd/summary.html">Summary and Filter</a>
     </li>
     <li>
-      <a href="articles/rmd/biomarker.html">7: Biomarker</a>
+      <a href="articles/rmd/upload.html">Upload</a>
     </li>
   </ul>
-</li>
-<li>
-  <a href="articles/animalcules.html">Command Line Analysis</a>
-</li>
-<li>
-  <a href="reference/index.html">Reference</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/compbiomed/animalcules">
-    <span class="fa fa-github"></span>
+  <a href="https://github.com/compbiomed/animalcules/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -107,9 +110,9 @@
       </header><div class="row">
   <div class="contents col-md-9">
 
-<div id="animalcules" class="section level2">
+<div id="animalcules-" class="section level2">
 <h2 class="hasAnchor">
-<a href="#animalcules" class="anchor"></a>animalcules <img src="https://github.com/compbiomed/materials/blob/master/animalcules/animalcules_logo.png?raw=true" align="right" width="170">
+<a href="#animalcules-" class="anchor"></a>animalcules <img src="https://github.com/compbiomed/materials/blob/master/animalcules/animalcules_logo.png?raw=true" align="right" width="170">
 </h2>
 
 </div>
@@ -125,16 +128,24 @@
 <a href="#documentation" class="anchor"></a>Documentation</h2>
 <p>Please check our website at <a href="https://compbiomed.github.io/animalcules-docs/" class="uri">https://compbiomed.github.io/animalcules-docs/</a></p>
 </div>
+<div id="citation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#citation" class="anchor"></a>Citation</h2>
+<p>Our paper on animalcules was published on the journal <strong>Microbiome</strong> in 2021!</p>
+<p>You can find our paper here: <a href="https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-021-01013-0" class="uri">https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-021-01013-0</a></p>
+<p>Please cite:</p>
+<p><strong>Zhao, Y., Federico, A., Faits, T., Manimaran, S., Segrè, D., Monti, S. and Johnson, W.E., 2021. animalcules: interactive microbiome analytics and visualization in R. Microbiome, 9(1), pp.1-16.</strong></p>
+</div>
 <div id="before-installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#before-installation" class="anchor"></a>Before Installation</h2>
 <ul>
-<li>Make sure R version is &gt;= 4.0.0 and Bioconductor version is 3.12. Bioconductor could be updated by :</li>
+<li>Make sure R version is &gt;= 4.0.0 and Bioconductor version is 3.14. Bioconductor could be updated by :</li>
 </ul>
-<div class="sourceCode"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>
     <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span>
-<span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html">install</a></span><span class="op">(</span>version <span class="op">=</span> <span class="st">"3.12"</span><span class="op">)</span></code></pre></div>
+<span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html">install</a></span><span class="op">(</span>version <span class="op">=</span> <span class="st">"3.14"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
@@ -142,19 +153,19 @@
 <ul>
 <li>Install the release version of the package from Bioconductor</li>
 </ul>
-<div class="sourceCode"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>
   <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span>
 <span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html">install</a></span><span class="op">(</span><span class="st">"compbiomed/animalcules"</span><span class="op">)</span></code></pre></div>
 <ul>
 <li>Install the development version of the package from Github</li>
 </ul>
-<div class="sourceCode"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span><span class="op">(</span><span class="st">"devtools"</span>, quietly<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>
   <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"compbiomed/animalcules"</span><span class="op">)</span></code></pre></div>
 <p>Run the animalcules shiny app!</p>
-<div class="sourceCode"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/compbiomed/animalcules">animalcules</a></span><span class="op">)</span>
 <span class="fu"><a href="reference/run_animalcules.html">run_animalcules</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
@@ -169,17 +180,17 @@
 <ul>
 <li>Or if you’d like to build the Docker image from scratch</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> clone https://github.com/compbiomed/animalcules
-<span class="bu">cd</span> animalcules
-<span class="ex">docker</span> build --tag bucbm/animalcules:latest .</code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/compbiomed/animalcules</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> animalcules</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> build <span class="at">--tag</span> bucbm/animalcules:latest .</span></code></pre></div>
 <ul>
-<li>
-<p>Run with Docker</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">docker</span> run -d -p 8787:8787 -e PASSWORD=animalcules bucbm/animalcules:latest</code></pre></div>
-</li>
-<li><p>Go to <a href="http://localhost:8787/" class="uri">http://localhost:8787/</a> in browser and enter username: rstudio / password: animalcules. Then enter the following:</p></li>
+<li>Run with Docker</li>
 </ul>
-<div class="sourceCode"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">-p</span> 8787:8787 <span class="at">-e</span> PASSWORD=animalcules bucbm/animalcules:latest</span></code></pre></div>
+<ul>
+<li>Go to <a href="http://localhost:8787/" class="uri">http://localhost:8787/</a> in browser and enter username: rstudio / password: animalcules. Then enter the following:</li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/compbiomed/animalcules">animalcules</a></span><span class="op">)</span>
 <span class="fu"><a href="reference/run_animalcules.html">run_animalcules</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
@@ -204,6 +215,12 @@
 <li><a href="https://www.r-project.org/Licenses/Artistic-2.0">Artistic-2.0</a></li>
 </ul>
 </div>
+<div class="citation">
+<h2>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html">Citing animalcules</a></li>
+</ul>
+</div>
 <div class="developers">
 <h2>Developers</h2>
 <ul class="list-unstyled">
@@ -216,9 +233,10 @@
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://bioconductor.org/checkResults/3.9/bioc-LATEST/animalcules/"><img src="https://img.shields.io/badge/platforms-linux%20%7C%20osx%20%7C%20win-2a89a1.svg"></a></li>
+<li><a href="https://doi.org/doi:10.18129/B9.bioc.animalcules"><img src="https://img.shields.io/badge/Bioconductor-3.14-blue"></a></li>
+<li><a href="http://bioconductor.org/checkResults/release/bioc-LATEST/animalcules/"><img src="https://img.shields.io/badge/platforms-linux%20%7C%20osx%20%7C%20win-2a89a1.svg"></a></li>
 <li><a href="https://github.com/compbiomed/animalcules/commits/master"><img src="https://img.shields.io/github/last-commit/compbiomed/animalcules.svg"></a></li>
-<li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg"></a></li>
+<li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-steady-blue.svg"></a></li>
 <li><a href="http://bioconductor.org/checkResults/release/bioc-LATEST/animalcules/"><img src="https://bioconductor.org/shields/build/release/bioc/animalcules.svg"></a></li>
 </ul>
 </div>
