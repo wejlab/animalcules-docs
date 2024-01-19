@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Upload • animalcules</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../../bootstrap-toc.css">
 <script src="../../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,59 +33,56 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.9.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.19.2</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="../../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="../../articles/animalcules.html">Get started</a>
-</li>
-<li>
-  <a href="../../reference/index.html">Reference</a>
+  <a href="../../index.html">Home</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Interactive Shiny Analysis
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../../articles/rmd/abundance.html">Abundance</a>
+      <a href="../../articles/rmd/upload.html">1: Upload</a>
     </li>
     <li>
-      <a href="../../articles/rmd/biomarker.html">Biomarker</a>
+      <a href="../../articles/rmd/summary.html">2: Data Summary and Filtering</a>
     </li>
     <li>
-      <a href="../../articles/rmd/differential.html">Differential Analysis</a>
+      <a href="../../articles/rmd/abundance.html">3: Abundance</a>
     </li>
     <li>
-      <a href="../../articles/rmd/dimension.html">Dimension Reduction</a>
+      <a href="../../articles/rmd/diversity.html">4: Diversity</a>
     </li>
     <li>
-      <a href="../../articles/rmd/diversity.html">Diversity</a>
+      <a href="../../articles/rmd/dimension.html">5: Dimension Reduction</a>
     </li>
     <li>
-      <a href="../../articles/rmd/summary.html">Summary and Filter</a>
+      <a href="../../articles/rmd/differential.html">6: Differential Analysis</a>
     </li>
     <li>
-      <a href="../../articles/rmd/upload.html">Upload</a>
+      <a href="../../articles/rmd/biomarker.html">7: Biomarker</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="../../articles/animalcules.html">Command Line Analysis</a>
+</li>
+<li>
+  <a href="../../reference/index.html">Reference</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/compbiomed/animalcules/">
-    <span class="fab fa-github fa-lg"></span>
+  <a href="https://github.com/wejlab/animalcules" class="external-link">
+    <span class="fa fa-github"></span>
      
   </a>
 </li>
@@ -97,13 +96,13 @@
 
       
 
-      </header><script src="upload_files/header-attrs-2.8/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Upload</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/compbiomed/animalcules/blob/master/vignettes/rmd/upload.Rmd"><code>vignettes/rmd/upload.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/wejlab/animalcules/blob/HEAD/vignettes/rmd/upload.Rmd" class="external-link"><code>vignettes/rmd/upload.Rmd</code></a></small>
       <div class="hidden name"><code>upload.Rmd</code></div>
 
     </div>
@@ -114,105 +113,130 @@
 <ul>
 <li>Count File (Mostly used for uploading new dataset)</li>
 <li>Example Data (For exploring animalcules)</li>
-<li>animalcules file (Re-upload previously uploaded dataset quickly)</li>
+<li>animalcules file (Re-upload previously uploaded dataset
+quickly)</li>
 <li>phyloseq object</li>
 <li>BIOM file</li>
-<li>Count file with taxonomy id (this is the option if taxonomy table is not available)</li>
+<li>Count file with taxonomy id (this is the option if taxonomy table is
+not available)</li>
 <li>Pathoscope File</li>
 <li>animalcules-id file</li>
 </ul>
-<div id="count-file" class="section level3">
-<h3 class="hasAnchor">
-<a href="#count-file" class="anchor"></a>Count File</h3>
-<p>Both 16s and metagenomics generated data are supported here. The three required files are:</p>
+<div class="section level3">
+<h3 id="count-file">Count File<a class="anchor" aria-label="anchor" href="#count-file"></a>
+</h3>
+<p>Both 16s and metagenomics generated data are supported here. The
+three required files are:</p>
 <ul>
-<li>Counts file: each row is a species/OTU, each column is a sample name.</li>
-<li>Taxonomy file: each row is a species/OTU, each column is a taxonomy level.</li>
-<li>Annotation file: each row is a sample name, each column is a variable/feature name.</li>
+<li>Counts file: each row is a species/OTU, each column is a sample
+name.</li>
+<li>Taxonomy file: each row is a species/OTU, each column is a taxonomy
+level.</li>
+<li>Annotation file: each row is a sample name, each column is a
+variable/feature name.</li>
 </ul>
 <p>Make sure:</p>
 <ul>
-<li>The sample names in the counts file agree with the one in annotation file.</li>
-<li>The microbe names in the counts file agree with the ones in the taxonomy file.</li>
-<li>All three files have the same file separator / same file type (e.g. csv).</li>
-<li>All three files have the same format as seen in the example below:</li>
+<li>The sample names in the counts file agree with the one in annotation
+file.</li>
+<li>The microbe names in the counts file agree with the ones in the
+taxonomy file.</li>
+<li>All three files have the same file separator / same file type
+(e.g. csv).</li>
+<li>All three files have the same format as seen in the example
+below:</li>
 </ul>
-<p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/count2.PNG?raw=true" width="1200"></p>
+<p><img src="https://github.com/wejlab/materials/blob/master/animalcules/count2.PNG?raw=true" width="1200"></p>
 <p>Example files:</p>
 <ul>
-<li>Counts file: <a href="https://github.com/compbiomed/animalcules-docs/blob/master/example_data/count_example.csv" class="uri">https://github.com/compbiomed/animalcules-docs/blob/master/example_data/count_example.csv</a>
+<li>Counts file: <a href="https://github.com/wejlab/animalcules-docs/blob/master/example_data/count_example.csv" class="external-link uri">https://github.com/wejlab/animalcules-docs/blob/master/example_data/count_example.csv</a>
 </li>
-<li>Taxonomy file: <a href="https://github.com/compbiomed/animalcules-docs/blob/master/example_data/taxonomy_table.csv" class="uri">https://github.com/compbiomed/animalcules-docs/blob/master/example_data/taxonomy_table.csv</a>
+<li>Taxonomy file: <a href="https://github.com/wejlab/animalcules-docs/blob/master/example_data/taxonomy_table.csv" class="external-link uri">https://github.com/wejlab/animalcules-docs/blob/master/example_data/taxonomy_table.csv</a>
 </li>
-<li>Annotation file: <a href="https://github.com/compbiomed/animalcules-docs/blob/master/example_data/annotation_example.csv" class="uri">https://github.com/compbiomed/animalcules-docs/blob/master/example_data/annotation_example.csv</a>
+<li>Annotation file: <a href="https://github.com/wejlab/animalcules-docs/blob/master/example_data/annotation_example.csv" class="external-link uri">https://github.com/wejlab/animalcules-docs/blob/master/example_data/annotation_example.csv</a>
 </li>
 </ul>
 <p>Instructions:</p>
 <ul>
 <li>Click the “Browse…” button to upload required three files.</li>
-<li>Input which column in the annotation file is the sample name (default is 1).</li>
+<li>Input which column in the annotation file is the sample name
+(default is 1).</li>
 <li>Check if the annotation file has header (default is TRUE).</li>
 <li>Select the separator (default is comma AKA .csv file).</li>
 <li>Click the button “Upload”.</li>
 </ul>
 <p>Note: Each uploaded table will show up in the right panel.</p>
 <p>Running time: &lt; 1s</p>
-<p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/count.PNG?raw=true" width="500"></p>
+<p><img src="https://github.com/wejlab/materials/blob/master/animalcules/count.PNG?raw=true" width="500"></p>
 </div>
-<div id="example-data" class="section level3">
-<h3 class="hasAnchor">
-<a href="#example-data" class="anchor"></a>Example Data</h3>
-<p>There are three example datasets available in animalcules: a synthetic toy dataset (already loaded), a TB dataset, and an asthma dataset. Users could use any dataset to try all functions and features in animalcules.</p>
+<div class="section level3">
+<h3 id="example-data">Example Data<a class="anchor" aria-label="anchor" href="#example-data"></a>
+</h3>
+<p>There are three example datasets available in animalcules: a
+synthetic toy dataset (already loaded), a TB dataset, and an asthma
+dataset. Users could use any dataset to try all functions and features
+in animalcules.</p>
 <p>Instructions:</p>
 <ul>
 <li>Use the pulldown menu to select the example dataset.</li>
 <li>Click the “Upload” button.</li>
 </ul>
 <p>Running time: &lt; 0.5s</p>
-<p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/example.PNG?raw=true" width="500"></p>
+<p><img src="https://github.com/wejlab/materials/blob/master/animalcules/example.PNG?raw=true" width="500"></p>
 </div>
-<div id="animalcules-file" class="section level3">
-<h3 class="hasAnchor">
-<a href="#animalcules-file" class="anchor"></a>animalcules file</h3>
-<p>In animalcules, users could choose to save their dataset to a .rds file in the Tab 2 (Summary and Filter). Later, users could load this saved dataset by uploading the .rds file to animalcules easily via this animalcules file upload option.</p>
+<div class="section level3">
+<h3 id="animalcules-file">animalcules file<a class="anchor" aria-label="anchor" href="#animalcules-file"></a>
+</h3>
+<p>In animalcules, users could choose to save their dataset to a .rds
+file in the Tab 2 (Summary and Filter). Later, users could load this
+saved dataset by uploading the .rds file to animalcules easily via this
+animalcules file upload option.</p>
 <p>Running time: &lt; 0.5s</p>
-<p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/animalcules_file.PNG?raw=true" width="500"></p>
+<p><img src="https://github.com/wejlab/materials/blob/master/animalcules/animalcules_file.PNG?raw=true" width="500"></p>
 </div>
-<div id="phyloseq-object" class="section level3">
-<h3 class="hasAnchor">
-<a href="#phyloseq-object" class="anchor"></a>Phyloseq object</h3>
-<p>Phyloseq object can be easily read into animalcules with the following steps. Suppose the phyloseq object in R is called ‘physeq’. First, write count table, taxonomy table, and sample data table to csv files:</p>
+<div class="section level3">
+<h3 id="phyloseq-object">Phyloseq object<a class="anchor" aria-label="anchor" href="#phyloseq-object"></a>
+</h3>
+<p>Phyloseq object can be easily read into animalcules with the
+following steps. Suppose the phyloseq object in R is called ‘physeq’.
+First, write count table, taxonomy table, and sample data table to csv
+files:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">phyloseq</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/write.table.html">write.csv</a></span><span class="op">(</span><span class="fu">otu_table</span><span class="op">(</span><span class="va">physeq</span><span class="op">)</span>, <span class="st">"count.csv"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/write.table.html">write.csv</a></span><span class="op">(</span><span class="fu">tax_table</span><span class="op">(</span><span class="va">physeq</span><span class="op">)</span>, <span class="st">"tax.csv"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/write.table.html">write.csv</a></span><span class="op">(</span><span class="fu">sample_data</span><span class="op">(</span><span class="va">physeq</span><span class="op">)</span>, <span class="st">"sample.csv"</span><span class="op">)</span></code></pre></div>
-<p>Then, follow the same ‘count file’ upload steps as shown above with the three csv files.</p>
-<p>To generate a phyloseq object from the animalcules MAE object is also very simple:</p>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">phyloseq</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html" class="external-link">write.csv</a></span><span class="op">(</span><span class="fu">otu_table</span><span class="op">(</span><span class="va">physeq</span><span class="op">)</span>, <span class="st">"count.csv"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html" class="external-link">write.csv</a></span><span class="op">(</span><span class="fu">tax_table</span><span class="op">(</span><span class="va">physeq</span><span class="op">)</span>, <span class="st">"tax.csv"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html" class="external-link">write.csv</a></span><span class="op">(</span><span class="fu">sample_data</span><span class="op">(</span><span class="va">physeq</span><span class="op">)</span>, <span class="st">"sample.csv"</span><span class="op">)</span></span></code></pre></div>
+<p>Then, follow the same ‘count file’ upload steps as shown above with
+the three csv files.</p>
+<p>To generate a phyloseq object from the animalcules MAE object is also
+very simple:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st">"phyloseq"</span><span class="op">)</span>
-
-<span class="co"># Extract data</span>
-<span class="va">microbe</span> <span class="op">&lt;-</span> <span class="va">MAE</span><span class="op">[[</span><span class="st">"MicrobeGenetics"</span><span class="op">]</span><span class="op">]</span> 
-
-<span class="co"># host &lt;- MAE[['HostGenetics']]</span>
-<span class="va">tax_table</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">rowData</a></span><span class="op">(</span><span class="va">microbe</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>  <span class="co"># organism x taxlev</span>
-<span class="va">sam_table</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">colData</a></span><span class="op">(</span><span class="va">microbe</span><span class="op">)</span><span class="op">)</span> <span class="co"># sample x condition</span>
-<span class="va">counts_table</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assays</a></span><span class="op">(</span><span class="va">microbe</span><span class="op">)</span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">sam_table</span><span class="op">)</span><span class="op">]</span><span class="op">)</span>  <span class="co"># organism x sample</span>
-
-<span class="co"># build phyloseq objecy</span>
-<span class="va">OTU</span> <span class="op">=</span> <span class="fu">otu_table</span><span class="op">(</span><span class="va">counts_table</span>, taxa_are_rows <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="va">TAX</span> <span class="op">=</span> <span class="fu">tax_table</span><span class="op">(</span><span class="va">tax_table</span><span class="op">)</span>
-<span class="va">SAM</span> <span class="op">=</span> <span class="fu">sample_data</span><span class="op">(</span><span class="va">sam_table</span><span class="op">)</span>
-<span class="va">physeq</span> <span class="op">=</span> <span class="fu">phyloseq</span><span class="op">(</span><span class="va">OTU</span>, <span class="va">TAX</span>, <span class="va">SAM</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"phyloseq"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Extract data</span></span>
+<span><span class="va">microbe</span> <span class="op">&lt;-</span> <span class="va">MAE</span><span class="op">[[</span><span class="st">"MicrobeGenetics"</span><span class="op">]</span><span class="op">]</span></span>
+<span></span>
+<span><span class="co"># host &lt;- MAE[['HostGenetics']]</span></span>
+<span><span class="va">tax_table</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">rowData</a></span><span class="op">(</span><span class="va">microbe</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="co"># organism x taxlev</span></span>
+<span><span class="va">sam_table</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">colData</a></span><span class="op">(</span><span class="va">microbe</span><span class="op">)</span><span class="op">)</span> <span class="co"># sample x condition</span></span>
+<span><span class="va">counts_table</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">assays</a></span><span class="op">(</span><span class="va">microbe</span><span class="op">)</span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">sam_table</span><span class="op">)</span><span class="op">]</span><span class="op">)</span> <span class="co"># organism x sample</span></span>
+<span></span>
+<span><span class="co"># build phyloseq objecy</span></span>
+<span><span class="va">OTU</span> <span class="op">&lt;-</span> <span class="fu">otu_table</span><span class="op">(</span><span class="va">counts_table</span>, taxa_are_rows <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="va">TAX</span> <span class="op">&lt;-</span> <span class="fu">tax_table</span><span class="op">(</span><span class="va">tax_table</span><span class="op">)</span></span>
+<span><span class="va">SAM</span> <span class="op">&lt;-</span> <span class="fu">sample_data</span><span class="op">(</span><span class="va">sam_table</span><span class="op">)</span></span>
+<span><span class="va">physeq</span> <span class="op">&lt;-</span> <span class="fu">phyloseq</span><span class="op">(</span><span class="va">OTU</span>, <span class="va">TAX</span>, <span class="va">SAM</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="biom-file" class="section level3">
-<h3 class="hasAnchor">
-<a href="#biom-file" class="anchor"></a>Biom file</h3>
+<div class="section level3">
+<h3 id="biom-file">Biom file<a class="anchor" aria-label="anchor" href="#biom-file"></a>
+</h3>
 <p>Make sure:</p>
 <ul>
-<li>The BIOM file must contain the sample metadata info (annotation for each sample)</li>
-<li>Please check <a href="http://biom-format.org/documentation/adding_metadata.html" class="uri">http://biom-format.org/documentation/adding_metadata.html</a> to add sample metadate into .biom file if sample metadata is missing.</li>
+<li>The BIOM file must contain the sample metadata info (annotation for
+each sample)</li>
+<li>Please check <a href="http://biom-format.org/documentation/adding_metadata.html" class="external-link uri">http://biom-format.org/documentation/adding_metadata.html</a>
+to add sample metadate into .biom file if sample metadata is
+missing.</li>
 </ul>
 <p>Instructions:</p>
 <ul>
@@ -221,69 +245,93 @@
 <li>Click the button “Upload”.</li>
 </ul>
 <p>Running time: &lt; 0.5s</p>
-<p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/biom.png?raw=true" width="500"></p>
+<p><img src="https://github.com/wejlab/materials/blob/master/animalcules/biom.png?raw=true" width="500"></p>
 </div>
-<div id="count-file-with-taxonomy-id" class="section level3">
-<h3 class="hasAnchor">
-<a href="#count-file-with-taxonomy-id" class="anchor"></a>Count File with Taxonomy id</h3>
-<p>Both 16s and metagenomics generated data are supported here. The two required files are:</p>
+<div class="section level3">
+<h3 id="count-file-with-taxonomy-id">Count File with Taxonomy id<a class="anchor" aria-label="anchor" href="#count-file-with-taxonomy-id"></a>
+</h3>
+<p>Both 16s and metagenomics generated data are supported here. The two
+required files are:</p>
 <ul>
-<li>Counts file: each row is a tax id, each column is a sample name.</li>
-<li>Annotation file: each row is a sample name, each column is a variable/feature name.</li>
+<li>Counts file: each row is a tax id, each column is a sample
+name.</li>
+<li>Annotation file: each row is a sample name, each column is a
+variable/feature name.</li>
 </ul>
 <p>Make sure:</p>
 <ul>
-<li>The sample names in the counts file agree with the one in annotation file.</li>
-<li>The first element in eaah row is the taxonomy id, e.g. ti|657314</li>
-<li>Both files have the same file separator and same file type (e.g. csv).</li>
+<li>The sample names in the counts file agree with the one in annotation
+file.</li>
+<li>The first element in eaah row is the taxonomy id,
+e.g. ti|657314</li>
+<li>Both files have the same file separator and same file type
+(e.g. csv).</li>
 </ul>
 <p>Instructions:</p>
 <ul>
-<li>Click the “Advanced Options” checkbox and select “Count file with tax id”</li>
+<li>Click the “Advanced Options” checkbox and select “Count file with
+tax id”</li>
 <li>Click the “Browse…” button to upload required two files.</li>
-<li>Input which column in the annotation file is the sample name (default is 1).</li>
+<li>Input which column in the annotation file is the sample name
+(default is 1).</li>
 <li>Check if the annotation file has header (default is TRUE).</li>
 <li>Select the separator (default is comma AKA .csv file).</li>
 <li>Click the button “Upload”.</li>
 </ul>
 <p>Note: Each uploaded table will show up in the right panel.</p>
 <p>Running time: &lt; 1s</p>
-<p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/countTi.png?raw=true" width="500"></p>
+<p><img src="https://github.com/wejlab/materials/blob/master/animalcules/countTi.png?raw=true" width="500"></p>
 </div>
-<div id="pathoscope-file" class="section level3">
-<h3 class="hasAnchor">
-<a href="#pathoscope-file" class="anchor"></a>Pathoscope File</h3>
-<p>To analyze pathoscope outputs, users need to upload pathoscope reports (use browser for multiple reports upload), as well as an annotation file containing metadata for each sample. Note that the sample name in the annotation file must match the non-suffix part of the pathoscope file name. For example, one pathoscope report filename is: “sample_011-sam-report.tsv”, then the corresponding sample name in the annotation file must be: “sample_011”.</p>
+<div class="section level3">
+<h3 id="pathoscope-file">Pathoscope File<a class="anchor" aria-label="anchor" href="#pathoscope-file"></a>
+</h3>
+<p>To analyze pathoscope outputs, users need to upload pathoscope
+reports (use browser for multiple reports upload), as well as an
+annotation file containing metadata for each sample. Note that the
+sample name in the annotation file must match the non-suffix part of the
+pathoscope file name. For example, one pathoscope report filename is:
+“sample_011-sam-report.tsv”, then the corresponding sample name in the
+annotation file must be: “sample_011”.</p>
 <p>Instructions:</p>
 <ul>
-<li>Click the “Advanced Options” checkbox and select “PathoScope file”</li>
+<li>Click the “Advanced Options” checkbox and select “PathoScope
+file”</li>
 <li>Click the “Browse…” button to upload required files.</li>
-<li>Specify the pathoscope report file suffix (default is -sam-report.tsv).</li>
-<li>Input which column in the annotation file is the sample name (default is 1).</li>
+<li>Specify the pathoscope report file suffix (default is
+-sam-report.tsv).</li>
+<li>Input which column in the annotation file is the sample name
+(default is 1).</li>
 <li>Check if the annotation file has header (default is TRUE).</li>
 <li>Select the separator (default is Tab AKA .tsv file).</li>
 <li>Click the button “Upload”.</li>
 </ul>
-<p>Also, make sure to provide the correct column number for sample name in the annotation file, as well as the annotation file separator (tab, comma or semicolon).</p>
-<p>Note: One example pathoscope eport table and the annotation table will show up in the right panel.</p>
+<p>Also, make sure to provide the correct column number for sample name
+in the annotation file, as well as the annotation file separator (tab,
+comma or semicolon).</p>
+<p>Note: One example pathoscope eport table and the annotation table
+will show up in the right panel.</p>
 <p>Running time:</p>
 <ul>
 <li>Test dataset A with 30 samples: 10.8s</li>
 <li>Test dataset B with 587 samples: 22.1s</li>
 </ul>
-<p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/pathoscope.PNG?raw=true" width="500"></p>
+<p><img src="https://github.com/wejlab/materials/blob/master/animalcules/pathoscope.PNG?raw=true" width="500"></p>
 </div>
-<div id="animalcules-id-file" class="section level3">
-<h3 class="hasAnchor">
-<a href="#animalcules-id-file" class="anchor"></a>animalcules-id file</h3>
-<p>animalcules-id is a separate R pipeline that generates pathoscope-like outputs from fastq files. The required input is the animalcules-id generated .rds file. Here users could choose either EM count assay or Best hit assay.</p>
+<div class="section level3">
+<h3 id="animalcules-id-file">animalcules-id file<a class="anchor" aria-label="anchor" href="#animalcules-id-file"></a>
+</h3>
+<p>animalcules-id is a separate R pipeline that generates
+pathoscope-like outputs from fastq files. The required input is the
+animalcules-id generated .rds file. Here users could choose either EM
+count assay or Best hit assay.</p>
 <ul>
-<li>Click the “Advanced Options” checkbox and select “animalcules-id file”</li>
+<li>Click the “Advanced Options” checkbox and select “animalcules-id
+file”</li>
 <li>Click the “Browse…” button to upload required files.</li>
 <li>Choose EM count or best hit option</li>
 </ul>
 <p>Running time: &lt; 1s</p>
-<p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/animalcules_id.PNG?raw=true" width="500"></p>
+<p><img src="https://github.com/wejlab/materials/blob/master/animalcules/animalcules_id.PNG?raw=true" width="500"></p>
 </div>
   </div>
 
@@ -296,11 +344,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Yue Zhao, Anthony Federico, W. Evan Johnson.</p>
+  <p></p>
+<p>Developed by Jessica McClintock, Yue Zhao, Anthony Federico, W. Evan Johnson.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
@@ -308,6 +358,8 @@
 
   
 
+
+  
 
   </body>
 </html>

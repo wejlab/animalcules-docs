@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Summary and Filter • animalcules</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../../bootstrap-toc.css">
 <script src="../../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,59 +33,56 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">animalcules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.9.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.19.2</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="../../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="../../articles/animalcules.html">Get started</a>
-</li>
-<li>
-  <a href="../../reference/index.html">Reference</a>
+  <a href="../../index.html">Home</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Interactive Shiny Analysis
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../../articles/rmd/abundance.html">Abundance</a>
+      <a href="../../articles/rmd/upload.html">1: Upload</a>
     </li>
     <li>
-      <a href="../../articles/rmd/biomarker.html">Biomarker</a>
+      <a href="../../articles/rmd/summary.html">2: Data Summary and Filtering</a>
     </li>
     <li>
-      <a href="../../articles/rmd/differential.html">Differential Analysis</a>
+      <a href="../../articles/rmd/abundance.html">3: Abundance</a>
     </li>
     <li>
-      <a href="../../articles/rmd/dimension.html">Dimension Reduction</a>
+      <a href="../../articles/rmd/diversity.html">4: Diversity</a>
     </li>
     <li>
-      <a href="../../articles/rmd/diversity.html">Diversity</a>
+      <a href="../../articles/rmd/dimension.html">5: Dimension Reduction</a>
     </li>
     <li>
-      <a href="../../articles/rmd/summary.html">Summary and Filter</a>
+      <a href="../../articles/rmd/differential.html">6: Differential Analysis</a>
     </li>
     <li>
-      <a href="../../articles/rmd/upload.html">Upload</a>
+      <a href="../../articles/rmd/biomarker.html">7: Biomarker</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="../../articles/animalcules.html">Command Line Analysis</a>
+</li>
+<li>
+  <a href="../../reference/index.html">Reference</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/compbiomed/animalcules/">
-    <span class="fab fa-github fa-lg"></span>
+  <a href="https://github.com/wejlab/animalcules" class="external-link">
+    <span class="fa fa-github"></span>
      
   </a>
 </li>
@@ -97,23 +96,26 @@
 
       
 
-      </header><script src="summary_files/header-attrs-2.8/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Summary and Filter</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/compbiomed/animalcules/blob/master/vignettes/rmd/summary.Rmd"><code>vignettes/rmd/summary.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/wejlab/animalcules/blob/HEAD/vignettes/rmd/summary.Rmd" class="external-link"><code>vignettes/rmd/summary.Rmd</code></a></small>
       <div class="hidden name"><code>summary.Rmd</code></div>
 
     </div>
 
     
     
-<div id="summary-plots" class="section level3">
-<h3 class="hasAnchor">
-<a href="#summary-plots" class="anchor"></a>Summary Plots</h3>
-<p>One type of summarization plot returns either a box plot or pie chart for continous or categorical data respectively while another type returns returns either a density plot or bar plot for continous or categorical data respectively.</p>
+<div class="section level3">
+<h3 id="summary-plots">Summary Plots<a class="anchor" aria-label="anchor" href="#summary-plots"></a>
+</h3>
+<p>One type of summarization plot returns either a box plot or pie chart
+for continous or categorical data respectively while another type
+returns returns either a density plot or bar plot for continous or
+categorical data respectively.</p>
 <p>Instructions:</p>
 <ul>
 <li>Filter by either metadata or microbe information</li>
@@ -122,15 +124,19 @@
 <li>(Optional) Discard samples or organisms</li>
 <li>Click filter to filter the datasaet</li>
 <li>Click reset to remove all previous applied filters</li>
-<li>Click download to export the modified animacules file for later use</li>
+<li>Click download to export the modified animacules file for later
+use</li>
 </ul>
 <p>Running time: &lt; 1s</p>
-<p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/fig_042.png?raw=true"></p>
+<p><img src="https://github.com/wejlab/materials/blob/master/animalcules/fig_042.png?raw=true"></p>
 </div>
-<div id="categorize" class="section level3">
-<h3 class="hasAnchor">
-<a href="#categorize" class="anchor"></a>Categorize</h3>
-<p>It is often necessary to bin continuous data into categories when performing analyses that require categorical input. To help ease this process, users can automatically categorize categorical data and provide custom bin breaks and labels in doing so.</p>
+<div class="section level3">
+<h3 id="categorize">Categorize<a class="anchor" aria-label="anchor" href="#categorize"></a>
+</h3>
+<p>It is often necessary to bin continuous data into categories when
+performing analyses that require categorical input. To help ease this
+process, users can automatically categorize categorical data and provide
+custom bin breaks and labels in doing so.</p>
 <p>Instructions:</p>
 <ul>
 <li>Select a continous variable to categorize</li>
@@ -141,7 +147,7 @@
 <li>Click “Create Bins”</li>
 </ul>
 <p>Running time: &lt; 1s</p>
-<p><img src="https://github.com/compbiomed/materials/blob/master/animalcules/fig_043.png?raw=true"></p>
+<p><img src="https://github.com/wejlab/materials/blob/master/animalcules/fig_043.png?raw=true"></p>
 </div>
   </div>
 
@@ -154,11 +160,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Yue Zhao, Anthony Federico, W. Evan Johnson.</p>
+  <p></p>
+<p>Developed by Jessica McClintock, Yue Zhao, Anthony Federico, W. Evan Johnson.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
@@ -166,6 +174,8 @@
 
   
 
+
+  
 
   </body>
 </html>
