@@ -136,16 +136,16 @@ table.</p>
 <h3 id="beta-diversity-heatmap">Beta Diversity Heatmap<a class="anchor" aria-label="anchor" href="#beta-diversity-heatmap"></a>
 </h3>
 <p>Users could visualize the beta diversity by selecting taxonomy
-levels, sample color condition. Samples could also be sorted by the
-selected condition. In Advanced options, users could choose different
-beta diversity metrics including Bray-curtis or Jaccard.</p>
+levels, different beta diversity metrics (including Bray-curtis or
+Jaccard), and sample color condition. Samples could also be sorted by
+the selected condition.</p>
 <p>Instructions:</p>
 <ul>
 <li>Select taxonomy level in the menu (default is genus).</li>
-<li>Select the target variable for beta diversity comparison.</li>
+<li>Select beta diversity metrics (default is bray-curtis).</li>
+<li>Select the target variable(s) for beta diversity comparison.</li>
 <li>Select if samples will be sorted by the selected variable (default:
 no sorting).</li>
-<li>(Optional) Select beta diversity metrics.</li>
 <li>Click the button “Plot Heatmap”</li>
 </ul>
 <p>Running time: &lt; 1s</p>
@@ -166,11 +166,30 @@ heatmap and statistical test. Test p-value will be showed in the
 “Heatmap”</li>
 <li>Select the test type (default is PERMANOVA).</li>
 <li>Select the target variable.</li>
-<li>(Optional) Select the number of permutations if doing
-PERMANOVA.</li>
+<li>(Optional) Select the number of permutations if doing PERMANOVA
+(default is 999).</li>
+<li>Select the taxonomy level and distance metric in the left
+panel.</li>
 <li>Click the button “Run”</li>
 </ul>
 <p><img src="https://github.com/wejlab/materials/blob/master/animalcules/fig_037.png?raw=true"></p>
+</div>
+<div class="section level3">
+<h3 id="beta-diversity-nmds-plot">Beta Diversity NMDS Plot<a class="anchor" aria-label="anchor" href="#beta-diversity-nmds-plot"></a>
+</h3>
+<p>Users may wish to display beta diversity information in an NMDS plot.
+This can be accomplished using the NMDS tab.</p>
+<p>Instructions:</p>
+<ul>
+<li>Click the tab “NMDS” in the right panel next to the tab
+“Boxplot”</li>
+<li>Select taxonomy level in the left panel menu (default is
+genus).</li>
+<li>Select beta diversity metrics int he left panel manu (default is
+bray-curtis).</li>
+<li>Select the target variable/condition</li>
+<li>Click the button “Plot NMDS”</li>
+</ul>
 </div>
   </div>
 
